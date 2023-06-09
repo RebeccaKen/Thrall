@@ -1,108 +1,226 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Thrall 
 
-Welcome USER_NAME,
+Thrall is a fictitious B2C e-commerce application catering to women's clothing, offering affordable options directly to the consumer. The store was designed and implemented with Django, Python, HTML, and CSS. 
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+Link to delpoyed site: [Duck Duck Go](https://duckduckgo.com)
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+## User Stories 
+## Skeletons 
+## Database Schema
+## SEO Considerations
+### SEO Keyword Research Process 
+In the following section, I will document the process for researching keywords for the website 'Thrall'. I will find and analyse search engine terms that people enter into search engines with the goal of using that data to optimize my website for search engine optimization. 
 
-## Gitpod Reminders
+**Business:** The topic of my Portfolio Project 5 will be a fictional online e-commerce business that sells low-price woman’s clothing online called, ‘Thrall.’. The business and website will be modelled on low-price e-commerce clothing sites like SHEIN, Boohoo.com and ASOS. 
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+**Keyword research steps**
+1.	Brainstorm your general topics: Clothes, women’s clothes, fashion, women’s clothes online, low-price clothes, women’s fashion online and cheap clothing brands.
 
-`python3 -m http.server`
+2.	Brain dump possible keywords for each of the general topics: 
+-	Clothes: t-shirt, trousers, dress, shoes, jackets, skirts, leggings 
+-	Women’s clothes: plus-size clothing, summer clothes, summer dresses, party dresses, clothing stores, men’s fashion
+-	Fashion: Fashion trends, fashion style, fashion website, fashion online, casual wear, streetwear, vintage clothing
+-	Low-price clothes: cheap clothes, low-prices clothes, cheapest online clothing shop
+-	Women’s fashion online: best online clothing stores, free-delivery online clothing, new online clothing 
+-	Cheap clothing brands: cheapest clothing brand, online clothing sale, How to get cute clothes on a budget? cheap like Shein, fast-fashion 
 
-A blue button should appear to click: _Make Public_,
+3.	Research your brain dump ideas on goggle: 
+4.	Ensure you have a selection of short and long-tail keywords: 
 
-Another blue button should appear to click: _Open Browser_.
+-	Clothes: 
+People also ask: What clothes last the longest? What's the hottest clothing brand? How do you shop for clothes on a budget? What clothing brand starts with P?
+Related searches: clothes men, women clothes online, clothes meaning, clothes website, women’s clothes, clothes for girls, new clothes, boohoo
+-	Women’s clothes:
+Related search terms: women's clothes online, women's clothes shops in killarney, women’s clothes sale, women’s clothes online, women’s clothes sizes, women’s clothes next day delivery, women’s clothes Ireland 
+Related searches: ASOS, Urban Outfitters, Uniqlo, Nordstorm, women’s clothing websites, where to shop for women’s clothing, trendy women’s clothing, new in women’s clothing, dunnes stores ladies dresses, boohoo, dunnes stores online same
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+-	Women’s clothes online: 
 
-A blue button should appear to click: _Make Public_,
+People also ask: Which online site is best for dress? Is BooHoo just online? What is ASOS website? What is the style in Ireland?
 
-Another blue button should appear to click: _Open Browser_.
+Related searches: Women's online clothing sale, Women's online clothing boutiques, Cheap women's online clothing, Best women's online clothing, Plus size women's online clothing Irish clothing websites
+-	 Fashion: 
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+People also ask: What do you mean fashion?, What clothes will be trending in 2023?, What does fashion in style mean?, How do fashion trends start?
 
-To log into the Heroku toolbelt CLI:
+Related Searches: fashion style, fashion nova, fashion women, fashion online, fashion designer, fashion website, fashion trends
+-	Low- price clothes: 
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+Related search terms: cheap clothes Ireland, cheap clothes online, cheap designer clothes website, cheap online shopping Ireland, dress for less, best online clothes shops ireland
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+Related searches: Low price clothes online, low price clothes women’s, low price clothes for ladies, cheap clothes online Ireland, cheap clothes Ireland, cheap clothes for men, cheap designer clothes website, clothing outlet online
 
-------
+-	Women’s fashion online: 
 
-## Release History
+People also ask: What is the most popular online clothing brand?, Which online site is best for dress?, What is ASOS website?, Where is Nasty Gal located?
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+Related searches: Asos, best online clothing stores, boohoo, nasty gal, best online clothes shops Ireland, dunnes stores online sales, women’s clothing
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+-	Cheap clothing brands: 
+People also ask: Why is M and M so cheap?, How to get cute clothes on a budget ?Does Shien sell good clothes?
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+Related searches: Cheap clothing brands women’s, Cheap clothing brands men’s, Cheap clothing brands online, top 10 online clothing stores, best cheap clothing brands, best cheap online clothing stores, cheap clothing stores online, cheap designer clothes 
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+5.	Assess your choices for relevance and authoritativeness, and dig into the data available on keyword volume and competition using wordtracker.com
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+Relevance
+I have disposed of certain keywords because my Portfolio Project 5 website will not be providing a solution too. I will also not use keywords that are the names of rival clothing brands: 
+men’s fashion, vintage clothing, cheap like Shein, women’s clothes next day delivery, women's clothes shops in killarney, cheap clothes for men, cheap clothing brands men’s,
+Authority
+I have disposed of any keywords that my Portfolio Project 5 website can not speak about from a place of authority or will be too competitive for my business/website to compete with: 
+women's clothes online, cheapest online clothing shop, clothing stores, best online clothing stores, cheap like Shein, fast-fashion, women’s clothes next day delivery, cheap clothes online
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+I have highlighted in red the keywords struck out from my core keyword list for both relevance and authority: 
+-	Clothes: t-shirt, trousers, dress, shoes, jackets, skirts, leggings 
+-	Women’s clothes: plus-size clothing, summer clothes, summer dresses, party dresses, clothing stores, men’s fashion
+-	Fashion: Fashion trends, fashion style, fashion website, fashion online, casual wear, streetwear, vintage clothing
+-	Low-price clothes: cheap clothes, low-prices clothes, cheapest online clothing shop
+-	Women’s fashion online: best online clothing stores, free-delivery online clothing, new online clothing 
+-	Cheap clothing brands: cheapest clothing brand, online clothing sale, How to get cute clothes on a budget? cheap like Shein, fast-fashion 
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+-	By the end of this exercise you should have between 10 and 20 keywords, which should be a mix of short-tail keywords and long-tail phrases.
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+**Viable keywords**
+Short: 
+Clothes, Women’s clothes, Fashion, t-shirt, dress, summer clothes, summer dresses, fashion style, fashion website, fashion online, casual wear, streetwear, cheap clothes, shoes, jackets, skirts, leggings, 
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+Long: 
+Low-price clothes, Women’s fashion online, cheap clothing brands, plus-size clothing, cheapest clothing brands, online clothing sale, How to get cute clothes on a budget, best online clothing store, free-delivery online clothing low-price clothes
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+Keywords checked against WordTracker: 
+Clothes:
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+## Content ## 
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+In the following section, I have documented my process for researching & creating content for my Portfolio Project 5 website. I will document the process of researching content for my website. 
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+**Business:** The topic of my Portfolio Project 5 will be a fictional online e-commerce business that sells low-price woman’s clothing online called, ‘Thrall’. The business and website will be modelled on low-price e-commerce clothing sites like SHEIN, Boohoo.com and ASOS. 
 
-------
 
-## FAQ about the uptime script
+ <ins>**Considerations** </ins>
 
-**Why have you added this script?**
+**1.	What do your users need?**
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+- User-Friendly Interface: The website should have a clean and intuitive design, making it easy for customers to navigate and find what they're looking for. The use of clear categories, filters, and search functionality help users quickly locate desired products.
 
-**How will this affect me?**
+- Attractive Visuals: Given that the business revolves around selling clothing, high-quality product images and visually appealing design elements are crucial. Showcasing clothing items through professional product photography and visually engaging layouts will help attract customers.
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+- Extensive Product Catalogue: The website will a wide range of low-priced women's clothing items to cater to various tastes and preferences. Include diverse categories like tops, dresses, bottoms, outerwear, and accessories. 
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+- Detailed Product Information: The website will provide comprehensive and accurate product descriptions, including fabric materials, sizing charts and care instructions. This helps customers make informed purchasing decisions and reduces the likelihood of returns or dissatisfaction.
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+- Reviews and Ratings: The website will incorporate a system where customers can leave reviews and ratings for the products they have purchased. Positive reviews build trust and credibility, while negative feedback helps you identify areas for improvement. Ensure transparency by displaying both positive and negative reviews, allowing customers to make informed choices.
 
-**So….?**
+- Secure Payment Options: The website will offer a secure payment method to give customers confidence when making transactions. 
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+- Mobile-Friendly Design: The website will be optimized for mobile devices, as a significant portion of online shopper’s access e-commerce platforms through smartphones and tablets. Responsive design elements will be implemented to ensure a seamless user experience across various screen sizes.
 
-**Can I opt out?**
+- Efficient Customer Support: Offer a comprehensive FAQ section. 
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+- Easy Returns and Exchange Policy: The website will clearly communicate Thrall’s returns and exchange policy, making it hassle-free for customers to return or exchange products if needed. A transparent and customer-friendly policy instils confidence and encourages repeat purchases.
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
 
-**Anything more?**
+**2.	What information and features can you provide to meet those needs?**
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+- Homepage: The website will have an attractive and engaging homepage that showcases your brand and highlights relevant images or content. The homepage will also sport visually appealing banners to grab customers' attention.
 
----
+- Product Listings: The websites’ product listings will be organized into clear categories and subcategories, making it easy for customers to browse and find specific items. 
 
-Happy coding!
+- Shopping Cart: The website will have a user-friendly shopping cart feature that allows customers to add items, view their cart, update quantities, and proceed to checkout seamlessly. It will display the total order value, shipping fees, and any discounts.
+
+- Search and Filters: The website will have a robust search functionality that allows customers to search for specific products or keywords.
+
+- Customer Reviews and Ratings: The website will enable customers to leave reviews and ratings for products they have purchased. These reviews will help others make purchasing decisions. 
+
+- Secure Checkout: The website will have a secure and encrypted checkout process that protects customers' payment information. 
+
+- Account Registration: Customers will have the option to create an account on the website. This allows for a smoother checkout process and order history tracking.
+
+- Newsletter Subscription: Customers will have the option to subscribe to Thrall’s newsletter to receive updates on new arrivals, promotions, and exclusive offers. 
+
+
+**3.	How can you make the information easy to understand?**
+
+- Clear and Concise Language: The website will have simple and straightforward language to convey information. It will avoid jargon or overly technical terms that may confuse or alienate your customers. Sentences and paragraphs will be concise, focusing on the essential details.
+  
+- Use Headings and Subheadings: Content will be organized using headings and subheadings to create a clear hierarchy. This allows users to scan the page quickly and find the information they are looking for. 
+  
+- Bullet Points and Lists: Information will be presented in bullet points or numbered lists where applicable. 
+  
+- Visuals: Visuals such as icons and images to complement textual information. 
+
+- Consistent Formatting: The website will maintain a consistent formatting style throughout to create a cohesive and user-friendly experience.
+  
+- 	Emphasize Important Information: Important information will be highlighted using techniques such as bold or italicized text, coloured text, or callout boxes. This will draw attention to critical details or instructions, making them easier to spot and understand.
+ 
+- Avoid Information Overload: The website will avoid overwhelming users with an excessive amount of information on a single page. The content will be broken up into logical sections.
+  
+- User-Friendly Navigation: The website will have clear and intuitive navigation menus. Users should be able to easily find the information they need without having to search extensively. 
+  
+- Accessibility Considerations: The website will be accessible to a wide range of users, including those with visual impairments. Use alternative text for image will ensure that your website can be navigated using keyboard-only inputs.
+
+
+**4.	How can you demonstrate expertise, authoritativeness, and trustworthiness in your content?**
+
+- High-Quality and Well-Researched Content: The content on the website is accurate, up-to-date, and well-researched. 
+
+- Design and Branding: The website will be visually appealing and reflect Thrall’s brand identity. 
+  
+- Reviews: The website will display reviews from satisfied customers to showcase positive feedback. The website will also display reviews from unsatisfied customers with a view on transparency. 
+  
+- Privacy Policy and Data Protection: The website will clearly communicate Thrall’s privacy policy, data protection measures, and adherence to relevant regulations such as GDPR or CCPA. 
+  
+- Consistent Brand Voice and Messaging: The website will maintain a consistent brand voice and messaging across all the site’s content. This helps build recognition and familiarity, reinforcing your expertise and trustworthiness.
+
+**5.	Would there be other pages within your own site you could link to from your chosen page?**
+
+- Navigation Bar: The navigation bar will have internal links help users navigate your website more easily by providing relevant pathways to other pages with related or supplementary information. The navigation bar will feature pages like ‘About Us’ and ‘Contact Us.’ 
+  
+- Cross-Promotion and Upselling: The website will have internal links that can be used as a means of cross-promotion, allowing the website to highlight related products, services, or content that may be of interest to the website’s user. For example, a blog post titled, ‘5 looks for hot girl summer’ will have links to all of Thrall’s products featured in the post. 
+  
+- Related Blog Posts or Articles: The blog or article section on the website, will link to relevant posts or articles that provide further insights, tips, or information on related topics.
+
+**6.	Are there opportunities to link back to external websites that already rank highly on Google?**
+
+- Building Relationships: The website will link to external websites like Twitter, Facebook, and Instagram.
+
+**7.	How can you help users discover other relevant parts of your web application?**
+
+- Clear and Intuitive Navigation: The website will have a clear and intuitive navigation bar that is easily accessible on every page of the web application. 
+
+- Homepage: The website will have a visually appealing homepage or dashboard that provides an overview of the key features, sections, or categories available in your web application. 
+  
+- Search Functionality: The website will have a search bar within the web application to allow users to search for specific content or features.
+
+
+
+
+
+
+### E-commerce Application Type
+Thrall is a fictitious B2C e-commerce application catering to women's clothing, offering affordable options directly to the consumer. With a target demographic of women aged 18-34, Thrall focuses on providing a seamless and convenient shopping experience. The website is specifically designed to facilitate quick and easy single-payment purchases, catering to the impulse-buying behaviour commonly associated with B2C e-commerce. It is important to note that Thrall's platform is exclusively dedicated to serving individual customers and is not intended for selling merchandise to other businesses.
+
+### Marketing Stratergy
+Thrall's marketing strategy would leverage a substantial budget to effectively reach its target demographic. A key focus would be on utilizing Google Ads to enhance Thrall's SEO ranking, increasing visibility and attracting organic traffic. To establish trust with the target demographic, a combination of organic marketing tactics would be employed. This would involve creating fashion-oriented content specifically tailored to the audience and distributing it across Thrall's social media platforms.
+
+Furthermore, Thrall would prioritize cultivating a robust social media presence, closely intertwined with a compelling influencer marketing strategy. By partnering with influential personalities who resonate with younger shoppers, Thrall aims to bolster its reputation through engaging content such as clothing hauls and reviews. To encourage product reviews across various social media platforms and YouTube, Thrall would offer an affiliate marketing program option or provide vouchers to influencers with an audience matching the demographic of the brand.
+
+This user-generated content, generated through influencer partnerships, would subsequently be shared on Thrall's own social media pages, further amplifying its reach and engagement within the target demographic.
+Regular newsletters would also be sent to a registered users inbox containing an overview of new products/sales and discount codes. 
+
+### Marketing research
+
+In the following document will display the research and evidence I have collected in order to select the most suitable marketing type for my PP5 project website, ‘Thrall’. Because the fictional e-commerce business to closely modelled of the Chinese e-commerce business, ‘Shein,’ the statistics, demographics and other visual aids are acquired from ‘similarweb’s’ 2022 information on Shein. 
+
+Similarweb is an online resource that uses public data sources are an aggregation of online information available to the public. Like how search engines like Google index the web, Similarweb employs an automated technique for capturing and indexing public data from billions of website pages and apps every month.
+
+
+
+## Features
+## Page Content
+## Deployment
+## Technologies Used 
+- similarweb
+- 
