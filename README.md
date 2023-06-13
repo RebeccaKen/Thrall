@@ -5,6 +5,15 @@ Thrall is a fictitious B2C e-commerce application catering to women's clothing, 
 Link to delpoyed site: [Duck Duck Go](https://duckduckgo.com)
 
 ## User Stories 
+
+### Epic 1 - Core website functionality
+1. As a user I can find a navigation bar and footer so that I can see what content there is on the website.
+2. As a user, I can see important information on the website's home page so that I don’t have to search the website for that information.
+3. As a user I can easily navigate through the website so that I can find the content I need.
+4. As a user I want to see icons for the website's social media pages so that I can follow Thrall on different platforms.
+
+### Epic 2 - Superuser Access 
+
 ## Skeletons 
 ## Database Schema
 ## SEO Considerations
