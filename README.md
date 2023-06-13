@@ -13,6 +13,30 @@ Link to delpoyed site: [Duck Duck Go](https://duckduckgo.com)
 4. As a user I want to see icons for the website's social media pages so that I can follow Thrall on different platforms.
 
 ### Epic 2 - Superuser Access 
+5. As a superuser, I can create, remove, update or delete product items from the database so that I can ensure the product items are accurate and that the catalog of items is fully up-to-date.
+6. As a superuser I can log in so that I can and access the backend of the website.
+
+### Epic 3 - Authenticated User Experience
+7. As a user, I want to register for an account so that I can have my information saved and manage my shopping.
+8. As a user, I can see a clear visual indication of my login status so that I can choose to be logged in or out.
+
+### Epic 4: Product Detail and Reviews
+9. As a user I can read detailed information about each product, including images, descriptions, sizes, and prices so that I can make an informed choice.
+10. As a user I can rate and review products so that give feedback to the website and other customers.
+
+### Epic 5: Shopping Cart and Checkout
+11. As a user I can seamless and user-friendly checkout process so that enter shipping and payment information quickly and securely.
+12. As a user I can add, remove, update or delete items from my cart so that manage my shopping cart.
+
+### Epic 6: Product Catalog and Search
+13. As a user I can easily browse through a wide variety of trendy and affordable clothing options so that I know what is available.
+14. As a user I can use search filters so that find the item I am looking for.
+
+### Epic 7: Customer service 
+15. As a user, I want to have access to a frequently asked questions (FAQ's) page so that I can seek out more information about Thrall.
+
+### Epic 8: Read Articles 
+16. As a user I can read engaging articles about Thrall's product items so that be up-to-date on the latest styles.
 
 ## Skeletons 
 ## Database Schema
