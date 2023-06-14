@@ -1,6 +1,6 @@
-from django.shortcuts import render, HttpResponse
+from django.shortcuts import render
 
 
 # Create your views here.
-def say_hello(request):
-    return HttpResponse("Hello!")
+def get_thrall_list(request):
+    return render(request, 'thrall/thrall_list.html')
