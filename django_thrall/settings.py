@@ -10,7 +10,12 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
+import os
 from pathlib import Path
+
+
+if os.path.isfile("env.py"):
+    import env
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -25,7 +30,7 @@ SECRET_KEY = 'django-insecure-_5fr!+29w(qgbn#ito2!dko$b!)9=m)1y7z0iz%b)pof@7v@g*
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [8000-rebeccaken-thrall-am0yy8a7pem.ws-eu99.gitpod.io]
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -49,7 +54,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'thrall.urls'
+ROOT_URLCONF = 'django_thrall.urls'
 
 TEMPLATES = [
     {
@@ -67,7 +72,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'thrall.wsgi.application'
+WSGI_APPLICATION = 'django_thrall.wsgi.application'
 
 
 # Database
