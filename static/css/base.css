@@ -19,6 +19,14 @@ body {
     width: 1.5rem;
 }
 
+#delivery-banner {
+    background-color: black;
+}
+
+#delivery-banner h4 {
+    color: white;
+}
+
 .logo-font {
     text-transform: uppercase;
 }
