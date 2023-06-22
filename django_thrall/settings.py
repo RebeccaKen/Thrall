@@ -53,6 +53,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'thrall',
     'products',
+    'blog',
 ]
 
 MIDDLEWARE = [
