@@ -28,12 +28,11 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'thewitcher'
-CLOUDINARY_URL = 'cloudinary://678616943582773:RmVie-GhzD4YCaf8IlKSvRmVj64@djbdldshh'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['thrall-e-commerce-website.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['thrall-e-commerce-website.herokuapp.com', 'localhost', '8000-rebeccaken-thrall-am0yy8a7pem.ws-eu100.gitpod.io']
 
 
 # Application definition
@@ -44,9 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'cloudinary_storage',
     'django.contrib.staticfiles',
-    'cloudinary',
     'django.contrib.sites',
     'allauth',
     'allauth.account',
@@ -54,6 +51,7 @@ INSTALLED_APPS = [
     'thrall',
     'products',
     'blog',
+    'django_summernote',
 ]
 
 MIDDLEWARE = [
@@ -166,7 +164,6 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
-STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 MEDIA_URL = '/media/'
