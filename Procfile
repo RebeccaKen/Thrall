@@ -1,1 +1,1 @@
-web: gunicorn THRALL.wsgi:application
+web: gunicorn django_thrall.wsgi:application

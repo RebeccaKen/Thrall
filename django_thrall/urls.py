@@ -7,4 +7,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('allauth.urls')),
     path('', include('thrall.urls')),
-]  + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    path('summernote/', include('django_summernote.urls')),
+]
