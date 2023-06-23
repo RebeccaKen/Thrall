@@ -35,10 +35,7 @@
 
     <title>Thrall {% block extra_title %}{% endblock %}</title>
 </head>
-<body>
     
-</head>
-<body>
     <body>
         <header class="container-fluid fixed-top">
             <div id="delivery-banner" class="row text-center bg-black">
@@ -113,6 +110,11 @@
                     {% include 'includes/mobile-top-header.html' %}
                     {% include 'includes/main-nav.html' %}
                 </nav>
+                {% block content %}
+                <div class="container">
+                    {% include 'templates/index.html' %}
+                </div>
+                {% endblock %}
     </header>
   
   
@@ -121,9 +123,6 @@
   {% endif %}
 
   {% block page_header %}
-  {% endblock %}
-
-  {% block content %}
   {% endblock %}
 
   {% block postloadjs %}
