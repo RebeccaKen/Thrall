@@ -109,7 +109,6 @@
                     </button>
                     {% include 'includes/mobile-top-header.html' %}
                     {% include 'includes/main-nav.html' %}
-                    {% include 'thrall/index.html' %}
                 </nav>
             </div>
     </header>
@@ -120,6 +119,9 @@
   {% endif %}
 
   {% block page_header %}
+  {% endblock %}
+
+  {% block content %}
   {% endblock %}
 
   {% block postloadjs %}
