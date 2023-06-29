@@ -43,14 +43,11 @@
             </div>
         </li>
 
-        <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black" href="#" id="specials-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <li class="nav-item">
+            <a class="logo-font font-weight-bold nav-link text-black" href="{% url 'blog:post_list' %}" id="specials-link">
                 Blog
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="specials-link">
-                <a href="{% url 'post_list' %}" class="dropdown-item">Blog Home</a>
-                <a href="{% url 'post_detail' %}" class="dropdown-item">Post Detail</a>
-            </div>
+              
         </li>
 
 
