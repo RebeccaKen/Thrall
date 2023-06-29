@@ -31,7 +31,7 @@ SECRET_KEY = 'thewitcher'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['thrall-e-commerce-website.herokuapp.com', 'localhost', '8000-rebeccaken-thrall-am0yy8a7pem.ws-eu100.gitpod.io']
+ALLOWED_HOSTS = ['thrall-e-commerce-website.herokuapp.com', 'localhost', '8000-rebeccaken-thrall-am0yy8a7pem.ws-eu101.gitpod.io']
 
 
 # Application definition
