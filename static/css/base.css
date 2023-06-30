@@ -78,6 +78,30 @@ body {
     margin-top: flex;
   }
 
+/* Masthead styling */
+
+<style>
+    .masthead {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: white;
+        margin-top: 20%;
+        padding: 20%;
+    }
+
+    .masthead-text {
+        flex: 1;
+    }
+
+    .masthead-image {
+        flex: 1;
+    }
+
+    .masthead-image img {
+        width: 100%;
+    }
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
