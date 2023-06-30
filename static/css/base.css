@@ -74,6 +74,10 @@ body {
 	z-index: -1;
 }
 
+.site-content {
+    margin-top: flex;
+  }
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
