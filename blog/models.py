@@ -26,6 +26,8 @@ class Post(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
     status = models.IntegerField(choices=STATUS, default=0)
     tags = models.ManyToManyField(Tag, related_name='posts', blank=True)
+    image_url = models.URLField(max_length=1024, null=True, blank=True)
+    image = models.ImageField(null=True, blank=True)
     reading_time = models.PositiveIntegerField(default=0, editable=False)
     likes = models.ManyToManyField(
         User, related_name='blogpost_like', blank=True)
