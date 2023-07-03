@@ -8,7 +8,7 @@
                 <a href="" class="dropdown-item">By Price</a>
                 <a href="" class="dropdown-item ">By Rating</a>
                 <a href="" class="dropdown-item ">By Category</a>
-                <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
+                <a href="{% url 'products' %}" class="dropdown-item">All Clothing</a>
             </div>
         </li>
 
@@ -17,9 +17,9 @@
                 Plus-Size
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="clothing-link">
-                <a href="" class="dropdown-item">Curve Dresses</a>
-                <a href="" class="dropdown-item">Jeans</a>
-                <a href="" class="dropdown-item">Tops</a>
+                <a href="{% url 'products' %}?category=curve,dresses" class="dropdown-item">Curve Dresses</a>
+                <a href="{% url 'products' %}?category=jeans"class="dropdown-item">Jeans</a>
+                <a href="{% url 'products' %}?category=tops" class="dropdown-item">Tops</a>
             </div>
         </li>
 
@@ -28,9 +28,9 @@
                 Dresses
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="homeware-link">
-                <a href="" class="dropdown-item">Summer Dresses</a>
-                <a href="" class="dropdown-item">Occasion Dresses</a>
-                <a href="" class="dropdown-item">Casual</a>
+                <a href="{% url 'products' %}?category=summer,dresses" class="dropdown-item">Summer Dresses</a>
+                <a href="{% url 'products' %}?category=occasion,dresses" class="dropdown-item">Occasion Dresses</a>
+                <a href="{% url 'products' %}?category=casual,dresses" class="dropdown-item">Casual</a>
             </div>
         </li>
 
@@ -39,8 +39,8 @@
                 Sale
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="specials-link">
-                <a href="" class="dropdown-item">Low Price</a>
-                <a href="" class="dropdown-item">Clearance</a>
+                <a href="{% url 'products' %}?category=low,price" class="dropdown-item">Low Price</a>
+                <a href="{% url 'products' %}?category=clearance" class="dropdown-item">Clearance</a>
             </div>
         </li>
 
