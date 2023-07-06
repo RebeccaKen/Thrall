@@ -104,6 +104,34 @@ body {
     cursor: pointer;
 }
 
+.post-title {
+    font-size: 5vh;
+    color: white;
+    /* Add more styles as needed */
+}
+
+.post-subtitle {
+    font-size: 2vh;
+    color: white;
+    /* Add more styles as needed */
+}
+
+.masthead {
+    background-color: #1f1818;
+  }
+  
+.masthead-image {
+    background-size: cover;
+    background-position: center;
+  }
+
+.post-content {
+    background-color: #fff;
+}
+
+.comments {
+    background-color: #fff;
+}
 .footer {
     background-color: black;
   }
