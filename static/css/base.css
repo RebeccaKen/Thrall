@@ -104,6 +104,10 @@ body {
     cursor: pointer;
 }
 
+.footer {
+    background-color: black;
+  }
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
