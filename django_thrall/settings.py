@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'thrall',
     'products',
     'django_summernote',
+    'contact',
     'blog',
     'bag',
 ]
