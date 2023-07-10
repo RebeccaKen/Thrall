@@ -66,7 +66,7 @@
                 <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
                     <ul class="list-inline list-unstyled text-center text-lg-right my-0 nav-items">
                         <li class="list-inline-item">
-                            <a class="text-black nav-link" href="{% url 'contact_list' %}">
+                            <a class="text-black nav-link" href="{% url 'contact' %}">
                                 <div class="text-center">
                                     <div><i class="fa-solid fa-envelope"></i></div>
                                     <p class="my-0">Contact Us</p>
@@ -152,8 +152,8 @@
     {% endblock %}
 
 
-  <!-- Footer -->
-  <footer class="footer fixed-bottom mt-3 bg-black" style="margin-top: 20px;">
+  {% block footer %}
+  <footer class="footer fixed-bottom mt-3 bg-black">
     <div class="container">
         <div class="row">
             <div class="col text-center text-white">
@@ -167,5 +167,6 @@
         </div>
     </div>
 </footer>
+{% endblock %}
 </body>
 </html>
