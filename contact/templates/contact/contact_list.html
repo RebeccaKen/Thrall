@@ -1,4 +1,15 @@
 {% extends 'base.html' %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
 {% load crispy_forms_tags %}
 <!DOCTYPE html>
 <html lang="en">
@@ -9,7 +20,6 @@
   <title>Contact Us</title>
 </head>
 <body>
-  {% block content %}
   <header class="p-3 text-black" aria-label="Feedback Form Header">
     <h1>Contact Form</h1>
   </header>  
@@ -27,6 +37,7 @@
     <div id="thank-you" class="d-none bg-danger text-white p-3 fixed-top text-center">
       Thank you for your contacting us!
     </div>
+
 
   <script>
   const form = document.querySelector('#contact-form');
