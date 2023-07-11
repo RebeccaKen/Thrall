@@ -10,11 +10,44 @@
     </div>
 {% endblock %}
 
+
 {% block content %}
-    <h1>Contact Form</h1>
-    <form method="post">
-        {% csrf_token %}
-        {{ form|crispy }}
-        <button type="submit">Submit</button>
-    </form>
+<div class="container-fluid mt-4" style="padding: 20px;">
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-8 col-lg-6"> <!-- Adjusted column widths for larger screens -->
+            <div class="card">
+                <div class="card-body">
+                    <h1 class="card-title text-center">Contact Form</h1>
+                    <form method="post">
+                        {% csrf_token %}
+                        <div class="mb-2 row">
+                            <div class="col-sm-12">
+                                {{ form.name|as_crispy_field }}
+                            </div>
+                        </div>
+                        <div class="mb-3 row">
+                            <div class="col-sm-12">
+                                {{ form.email|as_crispy_field }}
+                            </div>
+                        </div>
+                        <div class="mb-3 row">
+                            <div class="col-sm-12">
+                                {{ form.comments|as_crispy_field }}
+                            </div>
+                        </div>
+                        <div class="mb-3 row">
+                            <div class="col-sm-12">
+                                {{ form.rating|as_crispy_field }}
+                            </div>
+                        </div>
+                        <div class="d-grid gap-2 text-center"> <!-- Added 'text-start' class to align button to the left -->
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div
 {% endblock %}
+

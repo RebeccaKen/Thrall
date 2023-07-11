@@ -239,3 +239,9 @@ body {
         height: calc(100vh - 116px);
     }
 }
+
+@media (max-width: 375px) {
+    .h1.card-title {
+        margin-top: 80px;
+    }
+}
