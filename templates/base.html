@@ -152,27 +152,30 @@
     {% endblock %}
 
 
-  {% block footer %}
-  <p class="m-0 text-center">Open 24/7</p>
-  <div class="d-flex justify-content-center">
-    <ul class="list-inline">
-      <li class="list-inline-item mx-2">
-        <a href="https://facebook.com" target="_blank" rel="noopener"
-           aria-label="Visit our Facebook page (opens in a new tab)"><i class="fab fa-facebook"></i></a>
-      </li>
-      <li class="list-inline-item mx-2">
-        <a href="https://twitter.com" target="_blank" rel="noopener"
-           aria-label="Visit our Twitter page (opens in a new tab)"><i class="fab fa-twitter-square"></i></a>
-      </li>
-      <li class="list-inline-item mx-2">
-        <a href="https://youtube.com" target="_blank" rel="noopener"
-           aria-label="Visit our YouTube page (opens in a new tab)"><i class="fab fa-youtube-square"></i></a>
-      </li>
-      <li class="list-inline-item mx-2">
-        <a href="https://instagram.com" target="_blank" rel="noopener"
-           aria-label="Visit our Instagram page (opens in a new tab)"><i class="fab fa-instagram"></i></a>
-      </li>
-    </ul>
-  </div>
-</footer>
-{% endblock %}
+    {% block footer %}
+    <footer class="footer fixed-bottom mt-3 bg-black">
+        <div class="container">
+            <div class="row">
+                <div class="col text-center text-white">
+                    <p class="m-0">This site is for learning purposes</p>
+                    <div class="social-media-icons">
+                        <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Visit our Facebook page (opens in a new tab)">
+                            <i class="fa-brands fa-facebook-f ms-3 fa-lg" style="color: #ffffff;"></i>
+                        </a>
+                        <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Visit our Twitter page (opens in a new tab)">
+                            <i class="fa-brands fa-twitter ms-3 fa-lg" style="color: #ffffff;"></i>
+                        </a>
+                        <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Visit our Instagram page (opens in a new tab)">
+                            <i class="fab fa-instagram ms-3 fa-lg" style="color: #ffffff;"></i>
+                        </a>
+                        <a href="https://youtube.com" target="_blank" rel="noopener" aria-label="Visit our YouTube page (opens in a new tab)">
+                            <i class="fab fa-youtube ms-3 fa-lg" style="color: #ffffff;"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    {% endblock %}
+    </body>
+    </html>
