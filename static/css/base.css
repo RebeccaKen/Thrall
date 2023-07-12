@@ -204,6 +204,11 @@ body {
     overflow-y: auto;
 }
 
+.button-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */

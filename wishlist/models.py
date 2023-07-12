@@ -5,7 +5,7 @@ from products.models import Product
 
 class Wishlist(models.Model):
     name = models.CharField(max_length=100, default='Default Name')
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='wishlist')
     description = models.TextField(null=True, blank=True)
     added_at = models.DateTimeField(auto_now_add=True)
     size = models.CharField(max_length=50, null=True, blank=True)

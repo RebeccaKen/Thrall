@@ -5,7 +5,7 @@ from .models import Wishlist
 
 class WishlistForm(forms.ModelForm):
     class Meta:
-        model = Contact
+        model = Wishlist
         fields = ['name', 'description']
         widgets = {
             'description': forms.Textarea(attrs={'rows': 5}),

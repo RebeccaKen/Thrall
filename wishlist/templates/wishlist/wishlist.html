@@ -63,6 +63,12 @@
             {% else %}
                 <p class="lead mb-5">Your wishlist is empty.</p>
             {% endif %}
+            <h3>Edit Wishlist</h3>
+            <form method="POST" action="{% url 'view_wishlist' wishlist_item.id %}">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button class="btn btn-primary" type="submit">Save</button>
+            </form>
         </div>
     </div>
 </div>
