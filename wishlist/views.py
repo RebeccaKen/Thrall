@@ -29,6 +29,36 @@ def add_to_wishlist(request, item_id):
     return redirect('view_wishlist')
 
 
+def adjust_wishlist(request, item_id):
+
+    product = get_object_or_404(Product, pk=item_id)
+    quantity = int(request.POST.get('quantity'))
+    size = None
+    if 'product_size' in request.POST:
+        size = request.POST['product_size']
+    wishlist = request.session.get('wishlist', {})
+
+    if size:
+        if quantity > 0:
+            bag[item_id]['items_by_size'][size] = quantity
+            messages.success(request, f'Updated size {size.upper()} {product.name} quantity to {bag[item_id]["items_by_size"][size]}')
+        else:
+            del bag[item_id]['items_by_size'][size]
+            if not bag[item_id]['items_by_size']:
+                bag.pop(item_id)
+            messages.success(request, f'Removed size {size.upper()} {product.name} from your wishlist')
+    else:
+        if quantity > 0:
+            bag[item_id] = quantity
+            messages.success(request, f'Updated {product.name} quantity to {wishlist[item_id]}')
+        else:
+            bag.pop(item_id)
+            messages.success(request, f'Removed {product.name} from your wishlist')
+
+    request.session['wishlist'] = wishlist
+    return redirect(reverse('view_wishlist'))
+
+
 def remove_from_wishlist(request, item_id):
     """Remove an item from the wishlist"""
     wishlist_item = get_object_or_404(Wishlist, pk=item_id, user=request.user)
