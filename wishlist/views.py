@@ -28,11 +28,16 @@ def add_to_wishlist(request, item_id):
 
     return redirect('view_wishlist')
 
-    
+
 def remove_from_wishlist(request, item_id):
     """Remove an item from the wishlist"""
     wishlist_item = get_object_or_404(Wishlist, pk=item_id, user=request.user)
-    product_name = wishlist_item.product.name
+    
+    if wishlist_item.product is None:
+        product_name = "Unknown Product"
+    else:
+        product_name = wishlist_item.product.name
+    
     wishlist_item.delete()
     messages.success(request, f'{product_name} has been removed from your wishlist.')
     return redirect('view_wishlist')
