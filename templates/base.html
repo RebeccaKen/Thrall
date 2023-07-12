@@ -35,7 +35,6 @@
 
     <title>Thrall {% block extra_title %}{% endblock %}</title>
 </head>
-    
     <body>
         <header class="container-fluid fixed-top">
             <div id="delivery-banner" class="row text-center bg-black">
@@ -72,7 +71,7 @@
                                     <p class="my-0">Contact Us</p>
                                 </div>
                             </a>
-                <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+                        </li>
                         <li class="list-inline-item dropdown">
                             <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <div class="text-center">
@@ -82,7 +81,7 @@
                             </a>
                             <div class="dropdown-menu border-0" aria-labelledby="user-options">
                                 {% if request.user.is_authenticated %}
-                                    <a  class="dropdown-item">My Profile</a>
+                                    <a class="dropdown-item">My Profile</a>
                                     <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
                                 {% else %}
                                     <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
@@ -90,18 +89,16 @@
                                 {% endif %}
                             </div>
                         </li>
-                        <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
-                            <ul class="list-inline list-unstyled text-center text-lg-right my-0 nav-items">
-                                {% if user.is_authenticated %}
-                                    <li class="list-inline-item">
-                                        <a class="text-black nav-link" href="{% url 'view_wishlist' %}">
-                                            <div class="text-center">
-                                                <div><i class="fa-solid fa-heart"></i></div>
-                                                <p class="my-0">Wishlist</p>
-                                            </div>
-                                        </a>
-                                    </li>
-                                {% endif %}
+                        {% if user.is_authenticated %}
+                            <li class="list-inline-item">
+                                <a class="text-black nav-link" href="{% url 'view_wishlist' %}">
+                                    <div class="text-center">
+                                        <div><i class="fa-solid fa-heart"></i></div>
+                                        <p class="my-0">Wishlist</p>
+                                    </div>
+                                </a>
+                            </li>
+                        {% endif %}
                         <li class="list-inline-item">
                             <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_bag' %}">
                                 <div class="text-center">
@@ -128,9 +125,7 @@
                     {% include 'includes/main-nav.html' %}
                 </nav>
             </div>
-    </header>
-  
-  
+        </header>
     {% if messages %}
     <div class="message-container">
         {% for message in messages %}
