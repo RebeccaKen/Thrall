@@ -3,10 +3,18 @@ from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from .models import Wishlist
 from products.models import Product
-from .forms import WishlistForm
+from .forms import WishlistEditForm
 
 
 def view_wishlist(request):
+    user = request.user
+
+    # Retrieve the wishlist items for the user
+    wishlist_items = Wishlist.objects.filter(user=user)
+
+    return render(request, 'wishlist/wishlist.html', {'wishlist_items': wishlist_items})
+
+def edit_wishlist(request):
     user = request.user
 
     # Retrieve the specific wishlist instance for the user
@@ -19,11 +27,9 @@ def view_wishlist(request):
             messages.success(request, 'Wishlist updated successfully.')
             return redirect('view_wishlist')
     else:
-        form = WishlistForm(instance=wishlist)
+        form = WishlistEditForm(instance=wishlist)
 
-    wishlist_products = []  # Placeholder value for wishlist_products
-
-    return render(request, 'wishlist/wishlist.html', {'wishlist_products': wishlist_products, 'form': form})
+    return render(request, 'wishlist/wishlist.html', {'form': form})
 
 
 def add_to_wishlist(request, item_id):

@@ -3,7 +3,7 @@ from django.forms import ModelForm
 from .models import Wishlist
 
 
-class WishlistForm(forms.ModelForm):
+class WishlistEditForm(forms.ModelForm):
     class Meta:
         model = Wishlist
         fields = ['name', 'description']
