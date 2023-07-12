@@ -47,22 +47,6 @@
                 </div>
             </div>
           </div>
-            <div id="thank-you" class="d-none bg-danger text-white p-3 fixed-top text-center">
-              Thank you for your feedback!
-            </div>
-        
-          <script>
-          const form = document.querySelector('#feedback-form');
-          const thankYou = document.querySelector('#thank-you');
-        
-          form.addEventListener('submit', (event) => {
-            event.preventDefault();
-            thankYou.classList.remove('d-none');
-            setTimeout(() => {
-              thankYou.classList.add('d-none');
-              form.reset(); 
-            }, 2500);
-          });
-          </script>
-          {% endblock %}
+        </div>
+      </div>
 
