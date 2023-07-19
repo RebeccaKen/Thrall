@@ -106,6 +106,10 @@ body {
     cursor: pointer;
 }
 
+input[name='q']::placeholder {
+    color: #aab7c4;
+}
+
 .post-title {
     font-size: 5vh;
     color: white;
