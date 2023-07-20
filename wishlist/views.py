@@ -12,6 +12,9 @@ def view_wishlist(request):
     # Retrieve the wishlist items for the user
     wishlist_items = Wishlist.objects.filter(user=user)
 
+    for item in wishlist_items:
+        print("Wishlist Item:", item.name) 
+
     return render(request, 'wishlist/wishlist.html', {'wishlist_items': wishlist_items})
 
 
@@ -39,14 +42,30 @@ def add_to_wishlist(request, item_id):
     user = request.user
     size = request.POST.get('product_size')
 
-    # Check if the item with the same size already exists in the wishlist for the user
-    wishlist_item = Wishlist.objects.filter(user=user, product=product, size=size)
-    if wishlist_item.exists():
-        messages.info(request, f'{product.name} ({size}) is already in your wishlist.')
-    else:
-        Wishlist.objects.create(user=user, product=product, size=size)
-        messages.success(request, f'{product.name} ({size}) has been added to your wishlist.')
-
+    if request.method == 'POST':
+        # Create the WishlistForm instance with the POST data
+        form = WishlistForm(request.POST)
+        
+        # Check if the form is valid and contains any information
+        if form.is_valid() and form.cleaned_data['product']:
+            # Check if the item with the same size already exists in the wishlist for the user
+            wishlist_item = Wishlist.objects.filter(user=user, product=product, size=size)
+            if wishlist_item.exists():
+                messages.info(request, f'{product.name} ({size}) is already in your wishlist.')
+            else:
+                # Populate the user and product fields in the form
+                form.instance.user = user
+                form.instance.product = product
+                form.instance.size = size
+                
+                # Save the form to create the new wishlist item
+                form.save()
+                
+                messages.success(request, f'{product.name} ({size}) has been added to your wishlist.')
+        else:
+            # If the form is not valid or doesn't contain any information, show an error message
+            messages.error(request, 'Invalid request or missing product information.')
+    
     return redirect('view_wishlist')
 
 
