@@ -214,11 +214,6 @@ input[name='q']::placeholder {
     gap: 10px;
   }
 
-.card-img-top.img-fluid {
-    height: 40vh;
-    object-fit: cover;
-    object-position: center; 
-}
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
