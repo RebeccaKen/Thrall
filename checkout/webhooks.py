@@ -32,6 +32,7 @@ def webhook(request):
         return HttpResponse(status=400)
     except Exception as e:
         return HttpResponse(content=e, status=400)
+        print('Invalid payload')
 
     # Set up a webhook handler
     handler = StripeWH_Handler(request)
