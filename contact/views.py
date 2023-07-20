@@ -2,6 +2,7 @@ from django.shortcuts import render
 from .models import Contact
 from .forms import ContactForm
 from django.shortcuts import render, redirect
+from django.contrib import messages
 
 
 def contact_view(request):

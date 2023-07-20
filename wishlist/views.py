@@ -14,6 +14,7 @@ def view_wishlist(request):
 
     return render(request, 'wishlist/wishlist.html', {'wishlist_items': wishlist_items})
 
+
 def edit_wishlist(request):
     user = request.user
 
