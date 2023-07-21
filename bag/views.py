@@ -41,7 +41,8 @@ def add_to_bag(request, item_id):
             messages.success(request, f'Added {product.name} to your bag')
 
     request.session['bag'] = bag
-    return redirect(request, 'wishlist/wishlist.html')
+    return redirect(redirect_url)
+    
     
 
 def adjust_bag(request, item_id):

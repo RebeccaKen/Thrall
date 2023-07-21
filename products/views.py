@@ -97,13 +97,11 @@ def edit_review(request, review_id):
         return redirect('product_detail', product_id=review.product.id)
 
     if request.method == 'POST':
-        # Handle form submission to update the review
         form = ReviewEditForm(request.POST, instance=review)
         if form.is_valid():
             form.save()
             return redirect('product_detail', product_id=review.product.id)
     else:
-        # Display the review edit form
         form = ReviewEditForm(instance=review)
 
     context = {
@@ -111,7 +109,25 @@ def edit_review(request, review_id):
         'review': review,
     }
 
-    return render(request, 'products/edit_review.html', context)
+    return render(request, 'edit_review.html', context)
+
+@login_required
+def delete_review(request, review_id):
+    review = get_object_or_404(Review, id=review_id)
+
+    if request.user != review.user:
+        # If the current user doesn't own the review, return an error or redirect
+        return redirect('product_detail', product_id=review.product.id)
+
+    if request.method == 'POST':
+        review.delete()
+        return redirect('product_detail', product_id=review.product.id)
+
+    context = {
+        'review': review,
+    }
+
+    return render(request, 'product_review.html', context)
 
 
 def add_product(request):
