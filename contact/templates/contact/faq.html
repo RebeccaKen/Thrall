@@ -1,0 +1,146 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+
+{% block content %}
+<body>
+    <div class="container mt-5">
+      <h1 class="mb-4 text-center">Frequently Asked Questions</h1>
+      <div class="accordion" id="faqAccordion">
+        <!-- FAQ Item 1 -->
+        <div class="card">
+          <div class="card-header" id="heading1">
+            <h2 class="mb-0">
+              <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
+                How can I place an order?
+              </button>
+            </h2>
+          </div>
+  
+          <div id="collapse1" class="collapse show" aria-labelledby="heading1" data-parent="#faqAccordion">
+            <div class="card-body">
+              To place an order, simply browse our collection, choose your favorite items, and click on the "Add to Bag" button. Once you've finished shopping, proceed to the checkout page to complete your order.
+            </div>
+          </div>
+        </div>
+  
+        <!-- FAQ Item 2 -->
+        <div class="card">
+          <div class="card-header" id="heading2">
+            <h2 class="mb-0">
+              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                What payment methods do you accept?
+              </button>
+            </h2>
+          </div>
+          <div id="collapse2" class="collapse" aria-labelledby="heading2" data-parent="#faqAccordion">
+            <div class="card-body">
+              We accept all major credit cards, including Visa, MasterCard, American Express, and Discover. You can also pay using PayPal for added convenience.
+            </div>
+          </div>
+        </div>
+         <!-- FAQ Item 3 -->
+         <div class="card">
+            <div class="card-header" id="heading2">
+              <h2 class="mb-0">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                What is your return policy?
+                </button>
+              </h2>
+            </div>
+            <div id="collapse2" class="collapse" aria-labelledby="heading2" data-parent="#faqAccordion">
+              <div class="card-body">
+                We want you to be completely satisfied with your purchase. If for any reason you're not happy with your order, you can return it within 30 days of delivery for a full refund or exchange. Please check our Returns & Exchanges page for more details.
+              </div>
+            </div>
+          </div>
+          <!-- FAQ Item 3 -->
+         <div class="card">
+            <div class="card-header" id="heading2">
+              <h2 class="mb-0">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                How do I contact customer support?
+                </button>
+              </h2>
+            </div>
+            <div id="collapse2" class="collapse" aria-labelledby="heading2" data-parent="#faqAccordion">
+              <div class="card-body">
+                For any inquiries or assistance, our customer support team is here to help. You can reach us through our Contact Us page, where you can submit a message or find our contact details.
+              </div>
+            </div>
+          </div>
+          <!-- FAQ Item 3 -->
+         <div class="card">
+            <div class="card-header" id="heading2">
+              <h2 class="mb-0">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                Are the products on your website genuine?
+                </button>
+              </h2>
+            </div>
+            <div id="collapse2" class="collapse" aria-labelledby="heading2" data-parent="#faqAccordion">
+              <div class="card-body">
+               Yes, all the products on our website are 100% authentic and sourced directly from reputable brands and designers.
+              </div>
+            </div>
+          </div>
+          <!-- FAQ Item 3 -->
+         <div class="card">
+            <div class="card-header" id="heading2">
+              <h2 class="mb-0">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                Can I get a refund if the price of an item changes after I've purchased it?
+                </button>
+              </h2>
+            </div>
+            <div id="collapse2" class="collapse" aria-labelledby="heading2" data-parent="#faqAccordion">
+              <div class="card-body">
+                Unfortunately, we cannot offer refunds for price changes. Our prices are subject to change based on promotions and discounts.
+              </div>
+            </div>
+          </div>
+          <!-- FAQ Item 3 -->
+         <div class="card">
+            <div class="card-header" id="heading2">
+              <h2 class="mb-0">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                Is my personal information safe on your website?
+                </button>
+              </h2>
+            </div>
+            <div id="collapse2" class="collapse" aria-labelledby="heading2" data-parent="#faqAccordion">
+              <div class="card-body">
+                We take data security seriously. Your personal information is encrypted and stored securely. 
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="heading2">
+              <h2 class="mb-0">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                How often do you release new collections?
+                </button>
+              </h2>
+            </div>
+            <div id="collapse2" class="collapse" aria-labelledby="heading2" data-parent="#faqAccordion">
+              <div class="card-body">
+               We regularly update our collection with the latest fashion trends. Keep an eye on our website and subscribe to our newsletter to stay informed about new arrivals and promotions. 
+              </div>
+            </div>
+          </div>
+        </div>
+  
+      <div class="mt-5 text-center">
+        <p>We hope these FAQs address your queries. If you have any other questions or need further assistance, don't hesitate to <a href="{% url 'contact_form' %}"></a>. Happy shopping at Thrall!</p>
+      </div>
+  
+    </div>
+{% endblock %}

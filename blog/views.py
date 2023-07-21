@@ -61,7 +61,7 @@ class PostDetail(View):
 
         return render(
             request,
-            "post_detail.html",
+            "blog/post_detail.html",
             {
                 "post": post,
                 "comments": comments,
@@ -73,7 +73,6 @@ class PostDetail(View):
 
 
 class PostLike(View):
-
     def post(self, request, slug, *args, **kwargs):
         post = get_object_or_404(Post, slug=slug)
         if post.likes.filter(id=request.user.id).exists():
@@ -81,4 +80,4 @@ class PostLike(View):
         else:
             post.likes.add(request.user)
 
-        return HttpResponseRedirect(reverse('blog/post_detail', args=[slug]))
+        return HttpResponseRedirect(reverse('blog:post_detail', args=[slug]))

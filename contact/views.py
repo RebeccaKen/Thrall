@@ -16,3 +16,7 @@ def contact_view(request):
         form = ContactForm()
     
     return render(request, 'contact/contact_form.html', {'form': form})
+
+
+def faq_page(request):
+    return render(request, 'contact/faq.html')
