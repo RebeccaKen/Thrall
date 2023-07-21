@@ -146,6 +146,13 @@ input[name='q']::placeholder {
     background-color: #fff;
 }
 
+.reviews-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-height: 100vh;
+}
+
 .footer {
     background-color: black;
     position: fixed;

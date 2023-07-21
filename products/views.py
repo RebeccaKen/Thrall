@@ -2,9 +2,11 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
 from django.db.models.functions import Lower
+from django.contrib.auth.decorators import login_required
+from django.http import HttpResponseRedirect
 
-from .models import Product, Category
-from .forms import ProductForm
+from .models import Product, Category, Review
+from .forms import ProductForm, ReviewForm
 
 # Create your views here.
 
@@ -59,15 +61,57 @@ def all_products(request):
 
 
 def product_detail(request, product_id):
-    """ A view to show individual product details """
+    """ A view to show individual product details and handle review submission """
 
     product = get_object_or_404(Product, pk=product_id)
+    reviews = product.reviews.all()
+
+    if request.method == 'POST':
+        form = ReviewForm(request.POST)
+        if form.is_valid():
+            review = form.save(commit=False)
+            review.product = product
+            review.user = request.user
+            review.save()
+            messages.success(request, 'Review submitted successfully!')
+            # Redirect the user back to the product detail page
+            return redirect('product_detail', product_id=product_id)
+    else:
+        form = ReviewForm()
 
     context = {
         'product': product,
+        'reviews': reviews,
+        'form': form,
     }
 
     return render(request, 'products/product_detail.html', context)
+
+
+@login_required
+def edit_review(request, review_id):
+    review = get_object_or_404(Review, id=review_id)
+
+    if request.user != review.user:
+        # If the current user doesn't own the review, return an error or redirect
+        return redirect('product_detail', product_id=review.product.id)
+
+    if request.method == 'POST':
+        # Handle form submission to update the review
+        form = ReviewEditForm(request.POST, instance=review)
+        if form.is_valid():
+            form.save()
+            return redirect('product_detail', product_id=review.product.id)
+    else:
+        # Display the review edit form
+        form = ReviewEditForm(instance=review)
+
+    context = {
+        'form': form,
+        'review': review,
+    }
+
+    return render(request, 'products/edit_review.html', context)
 
 
 def add_product(request):
