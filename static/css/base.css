@@ -1,14 +1,21 @@
-html {
+html, body {
     height: 100%;
 }
 
 body {
     background: url('/media/women_modelling_landscape.jpg') no-repeat center center fixed;
     background-size: cover;
-    height: calc(100vh - 164px);
     color: #555;
     font-family: 'Lato';
+    height: calc(100vh - 164px);
+    margin: 0%;
+    display: flex;
+    flex-direction: column;
 }
+      
+.content {
+    flex: 1 0 auto;
+  }
 
 /* from Bulma */
 .icon {
@@ -138,9 +145,15 @@ input[name='q']::placeholder {
 .comments {
     background-color: #fff;
 }
+
 .footer {
     background-color: black;
-  }
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    margin-top: auto;
+    flex-shrink: 0;
+    }
 
 /* ------------------------------- bootstrap toasts */
 
