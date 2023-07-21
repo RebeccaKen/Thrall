@@ -153,6 +153,10 @@ input[name='q']::placeholder {
     min-height: 100vh;
 }
 
+.card-header button {
+    color: black;
+  }
+
 .footer {
     background-color: black;
     position: fixed;
