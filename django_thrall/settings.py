@@ -31,8 +31,8 @@ SECRET_KEY = 'thewitcher'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['thrall-e-commerce-website.herokuapp.com', 'localhost', '8000-rebeccaken-thrall-am0yy8a7pem.ws-eu102.gitpod.io']
 
+ALLOWED_HOSTS = ['thrall-e-commerce-website.herokuapp.com', 'localhost']
 
 
 # Application definition
@@ -146,12 +146,13 @@ if 'DATABASE_URL' in os.environ:
     DATABASES = {
         'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
     }
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+        }
     }
-}
 
 
 # Password validation
