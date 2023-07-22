@@ -40,7 +40,7 @@
         <header class="container-fluid fixed-top">
             <div id="delivery-banner" class="row text-center bg-black">
                 <div class="col">
-                    <h4 class="logo-font my-1 text-white">Free delivery on orders over ${{ free_delivery_threshold }}!</h4>
+                    <h4 class="logo-font my-1 text-white">Free delivery when you spend over ${{ free_delivery_threshold }}!</h4>
                 </div>
             </div>
             <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
@@ -75,7 +75,7 @@
                             </a>
                             <div class="dropdown-menu" aria-labelledby="contactDropdown">
                                 <a class="dropdown-item" href="{% url 'contact:contact' %}">Contact Us</a>
-                                <a class="dropdown-item" href="{% url 'contact:faq_page' %}">FAQ</a>
+                                <a class="dropdown-item" href="{% url 'contact:faq_page' %}">FAQ's</a>
                             </div>
                         </li>
                         <li class="list-inline-item dropdown">
@@ -87,6 +87,9 @@
                             </a>
                             <div class="dropdown-menu border-0" aria-labelledby="user-options">
                                 {% if request.user.is_authenticated %}
+                                {% if request.user.is_superuser %}
+                                    <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
+                                {% endif %}
                                 <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
                                     <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
                                 {% else %}
@@ -111,9 +114,9 @@
                                     <div><i class="fas fa-shopping-bag fa-lg"></i></div>
                                     <p class="my-0">
                                         {% if grand_total %}
-                                            ${{ grand_total|floatformat:2 }}
+                                           €{{ grand_total|floatformat:2 }}
                                         {% else %}
-                                            $0.00
+                                            €0.00
                                         {% endif %}
                                     </p>
                                 </div>
