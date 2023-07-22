@@ -6,7 +6,7 @@ from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseRedirect
 
 from .models import Product, Category, Review
-from .forms import ProductForm, ReviewForm
+from .forms import ProductForm, ReviewForm, ReviewEditForm
 
 # Create your views here.
 
@@ -61,23 +61,27 @@ def all_products(request):
 
 
 def product_detail(request, product_id):
-    """ A view to show individual product details and handle review submission """
+    """ A view to show individual product details and handle review submission and update """
 
     product = get_object_or_404(Product, pk=product_id)
     reviews = product.reviews.all()
 
     if request.method == 'POST':
-        form = ReviewForm(request.POST)
-        if form.is_valid():
-            review = form.save(commit=False)
-            review.product = product
-            review.user = request.user
-            review.save()
-            messages.success(request, 'Review submitted successfully!')
-            # Redirect the user back to the product detail page
-            return redirect('product_detail', product_id=product_id)
+        if request.user.is_authenticated:
+            user_review = reviews.filter(user=request.user).first()
+            form = ReviewForm(request.POST, instance=user_review)
+            if form.is_valid():
+                review = form.save(commit=False)
+                review.product = product
+                review.user = request.user
+                review.save()
+                messages.success(request, 'Review submitted successfully!')
+                return redirect('product_detail', product_id=product_id)
+        else:
+            messages.error(request, 'Please log in to leave a review.')
     else:
-        form = ReviewForm()
+        user_review = reviews.filter(user=request.user).first() if request.user.is_authenticated else None
+        form = ReviewForm(instance=user_review)
 
     context = {
         'product': product,
@@ -87,29 +91,37 @@ def product_detail(request, product_id):
 
     return render(request, 'products/product_detail.html', context)
 
-
 @login_required
 def edit_review(request, review_id):
-    review = get_object_or_404(Review, id=review_id)
+    """
+    A view to allow the users to edit their own review
+    """
 
-    if request.user != review.user:
-        # If the current user doesn't own the review, return an error or redirect
-        return redirect('product_detail', product_id=review.product.id)
+    review = get_object_or_404(Review, pk=review_id)
+    product = review.product
 
     if request.method == 'POST':
-        form = ReviewEditForm(request.POST, instance=review)
+        form = ReviewForm(request.POST, instance=review)
         if form.is_valid():
             form.save()
-            return redirect('product_detail', product_id=review.product.id)
-    else:
-        form = ReviewEditForm(instance=review)
+            messages.info(request, 'Review has been changed')
+            return redirect(reverse('product_detail', args=[product.id]))
+        else:
+            messages.error(request, 'Review edit failed. Please try again.')
 
+    else:
+        form = ReviewForm(instance=review)
+
+    messages.info(request, 'You are editing your review')
+    template = 'products/edit_review.html'  # Update the template name to 'edit_review.html'
     context = {
         'form': form,
-        'review': review,
+        'review': review,  # Pass the review to the template context using the correct variable name
+        'product': product,
+        'edit': True,
     }
+    return render(request, template, context)
 
-    return render(request, 'edit_review.html', context)
 
 @login_required
 def delete_review(request, review_id):

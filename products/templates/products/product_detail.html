@@ -114,7 +114,6 @@
         </div>
     </div>
 </div>
-
 <div class="container mt-5">
     <div class="row">
         <div class="col-12">
@@ -122,36 +121,40 @@
                 <div class="card-body">
                     <h2 class="card-title text-center">Reviews</h2>
                     {% for review in reviews %}
-                        <div class="card mb-3">
+                        <div class="card mb-2">
                             <div class="card-body">
                                 <p class="card-text">Comment: {{ review.comment }}</p>
                                 <p class="card-text">Rating: {{ review.score }}</p>
                                 <p class="card-text">Posted by: {{ review.user.username }}</p>
                                 {% if user.is_authenticated and user == review.user %}
-                                <!-- Display Edit Review Form -->
-                                <form method="post">
-                                    {% csrf_token %}
-                                    {{ review_edit_form.as_p }}
-                                    <div class="d-grid gap-2 text-center">
-                                        <button type="submit" class="btn btn-dark">Update Review</button>
+                                    <div class="row">
+                                        <div class="col-md-2">
+                                            <form method="post" action="{% url 'edit_review' review_id=review.id %}">
+                                                {% csrf_token %}
+                                                {{ review_edit_form.as_p }}
+                                                <div class="d-grid gap-2">
+                                                    <button type="submit" class="btn btn-dark">Edit</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <form method="post" action="{% url 'delete_review' review_id=review.id %}">
+                                                {% csrf_token %}
+                                                <input type="hidden" name="review_id" value="{{ review.id }}">
+                                                <div class="d-grid gap-2">
+                                                    <button type="submit" class="btn btn-danger">Delete</button>
+                                                </div>
+                                            </form>
+                                        </div>
                                     </div>
-                                </form>
-                                <!-- Display Delete Review Form -->
-                                <form method="post">
-                                    {% csrf_token %}
-                                    <input type="hidden" name="review_id" value="{{ review.id }}">
-                                    <div class="d-grid gap-2 text-center">
-                                        <button type="submit" class="btn btn-danger">Delete Review</button>
-                                    </div>
-                                </form>
-                            {% else %}
-                                <!-- Display Edit Review Button -->
-                                <a href="{% url 'edit_review' %}" class="btn btn-primary">Edit Review</a>
-                            {% endif %}
+                                    {% elif user.is_authenticated %}
+                                    <p class="text-center">You can only edit or delete your own reviews.</p>
+                                {% else %}
+                                    <p class="text-center">Please log in to edit or delete your review.</p>
+                                {% endif %}
+                            </div>
                         </div>
-                    </div>
-                {% endfor %}
-            </div>
+                    {% endfor %}
                 </div>
             </div>
         </div>
@@ -172,12 +175,12 @@
                         <form method="post">
                             {% csrf_token %}
                             <div class="mb-3 text-center">
-                                <label for="{{ form.score.id_for_label }}"></label>
-                                {{ form.comment|as_crispy_field }}
+                                <label for="{{ form.score.id_for_label }}">Rating:</label>
+                                {{ form.score|as_crispy_field }}
                             </div>
                             <div class="mb-3">
                                 <label for="{{ form.comment.id_for_label }}"></label>
-                                {{ form.score|as_crispy_field }}
+                                {{ form.comment|as_crispy_field }}
                             </div>
                             <div class="d-grid gap-2 text-center">
                                 <button type="submit" class="btn btn-dark">Submit</button>
