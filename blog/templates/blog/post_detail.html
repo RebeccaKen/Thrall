@@ -23,14 +23,6 @@
                             <p class="post-subtitle">Reading Time: {{ reading_time }} minutes</p> 
                         </div>
                     </div>
-                    <div class="d-none d-md-block col-md-6 masthead-image">
-                        <!-- The featured image URL goes in the src attribute -->
-                        {% if "placeholder" in post.featured_image.url %}
-                        <img src="{{ post.featured_image.url }}" width="100%">
-                        {% else %}
-                        <img src="{{ post.featured_image.url }}" width="100%">
-                        {% endif %}
-                    </div>
                 </div>
             </div>
         </div>
@@ -44,12 +36,11 @@
                 <p class="card-text">
                     <div class="col mt-3">
                         <div class="post-content">
-                            <!-- The post content goes here -->
                             <p>
                                 {{ post.content | safe }}
                             </p>
                             <div class="row">
-                                <div class="col-1">
+                                <div class="col-12">
                                     {% if user.is_authenticated %}
                                     <form class="d-inline" action="{% url 'blog:post_like' post.slug %}" method="POST">
                                         {% csrf_token %} 
@@ -64,7 +55,7 @@
                                     {% endif %}
                                     <span class="text-secondary">{{ post.number_of_likes }}</span>
                                 </div>
-                                <div class="col-1">
+                                <div class="col-12">
                                     <strong class="text-secondary"><i class="far fa-comments"></i> {{ total_comments }}</strong>
                                 </div>
                             </div>
@@ -74,12 +65,12 @@
                 </p>
                 <div class="row">
                     <div class="col-md-12">
-                        <h3>Comments:</h3>
-                        <div class="card-body" style="border: none; padding: 0;">
-                            <div class="comments">
-                                {% for comment in comments %}
-                                <div class="comments" style="padding: 10px;">
-                                    <div class="comment" style="padding: 10px;">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h3>Comments:</h3>
+                                <div class="list-group">
+                                    {% for comment in comments %}
+                                    <div class="list-group-item">
                                         <p class="font-weight-bold">
                                             {{ comment.name }}
                                             <span class="text-muted font-weight-normal">
@@ -88,33 +79,33 @@
                                         </p>
                                         {{ comment.body | linebreaks }}
                                     </div>
+                                    {% endfor %}
                                 </div>
-                                {% endfor %}
+                            </div>
+                            <div class="col-md-4 mt-4">
+                                <div class="card">
+                                    <div class="card-body">
+                                        {% if commented %}
+                                        <div class="alert alert-success" role="alert">
+                                            Your comment is awaiting approval
+                                        </div>
+                                        {% else %}
+                                        {% if user.is_authenticated %}
+                                        <h3>Leave a comment:</h3>
+                                        <p>Posting as: {{ user.username }}</p>
+                                        <form method="post" style="margin-top: 1.3em;">
+                                            {{ comment_form | crispy }}
+                                            {% csrf_token %}
+                                            <button type="submit" class="btn btn-dark btn-block">Submit</button>
+                                        </form>
+                                        {% else %}
+                                        <p>Log in to leave a comment.</p>
+                                        {% endif %}
+                                        {% endif %}
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-4 card mb-4 mt-4">
-                        <div class="card-body">
-                            {% if commented %}
-                            <div class="alert alert-success" role="alert">
-                                Your comment is awaiting approval
-                            </div>
-                            {% else %}
-                            {% if user.is_authenticated %}
-                            <h3>Leave a comment:</h3>
-                            <p>Posting as: {{ user.username }}</p>
-                            <form method="post" style="margin-top: 1.3em;">
-                                {{ comment_form | crispy }}
-                                {% csrf_token %}
-                                <button type="submit" class="btn btn-signup btn-lg btn-black">Submit</button>
-                            </form>
-                            {% else %}
-                            <p>Log in to leave a comment.</p>
-                            {% endif %}
-                            {% endif %}
-                        </div>
-                    </div>
-                </div>
                 <div class="row" style="margin-bottom: 20px;">
                     <div class="col-md-8">
                         <h3>Tags:</h3>
