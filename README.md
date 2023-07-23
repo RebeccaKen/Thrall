@@ -44,6 +44,82 @@ Link to delpoyed site: [Duck Duck Go](https://duckduckgo.com)
 19. As a site user I can read engaging articles about Thrall's product items so that be up-to-date on the latest styles.
 
 ## Skeletons 
+
+### Mobile wireframes
+
+Homepage:
+
+
+<img src="media/thrall-wireframes/homepage-mobile.png"  width="50%" height="20%">
+
+Blog Post listings page:
+
+<img src="media/thrall-wireframes/blog-page-mobile.png"  width="50%" height="20%">
+
+Blog page:
+
+<img src="media/thrall-wireframes/blog-post-mobile.png"  width="50%" height="20%">
+
+Product Management page:
+
+<img src="media/thrall-wireframes/product-management-mobile.png"  width="50%" height="20%">
+
+Products page:
+
+<img src="media/thrall-wireframes/products-page mobile.png"  width="50%" height="20%">
+
+Profile page:
+
+<img src="media/thrall-wireframes/profile-page-mobile.png"  width="50%" height="20%">
+
+Shopping bag: 
+
+<img src="media/thrall-wireframes/shopping-cart-mobile.png"  width="50%" height="20%">
+
+
+### Desktop Wireframes: 
+
+Homepage: 
+
+![image of homepage wireframe](media/thrall-wireframes/homepage.png)
+
+Blog page:
+
+![image of blog detail page wireframe](media/thrall-wireframes/blog-detail-page.png)
+
+Blog Post listing page:
+
+![image of blog post page ](media/thrall-wireframes/blog-post-page.png)
+
+Contact Form page: 
+
+![image of contact form page wireframe ](media/thrall-wireframes/contact-form-page.png)
+
+Frequently asked questions page: 
+
+![image of faq page wireframe](media/thrall-wireframes/faq-page.png)
+
+Products page: 
+
+![image of product page](<media/thrall-wireframes/products page.png>)
+
+Product detail page: 
+
+![image of product detail page wireframe](media/thrall-wireframes/product-detail-page.png)
+
+Product Management page:
+
+![image of product management page wireframe](media/thrall-wireframes/product-management-page.png)
+
+Profile page:
+
+![image of profile page wireframe](media/thrall-wireframes/profile-page.png)
+
+Shopping bag page:
+
+![image of shopping cart wireframe](<media/thrall-wireframes/shopping cart page.png>)
+
+
 ## Database Schema
 ## SEO Considerations
 ### SEO Keyword Research Process 
