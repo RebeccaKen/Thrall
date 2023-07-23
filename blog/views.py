@@ -19,7 +19,7 @@ class PostDetail(View):
         comments = post.comments.filter(approved=True).order_by("-created_on")
         liked = False
         if post.likes.filter(id=self.request.user.id).exists():
-            liked = True 
+            liked = True
 
         tags = post.tags.all()
         reading_time = post.reading_time
