@@ -14,7 +14,7 @@ def contact_view(request):
             return redirect('thrall')
     else:
         form = ContactForm()
-    
+
     return render(request, 'contact/contact.html', {'form': form})
 
 
