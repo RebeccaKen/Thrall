@@ -32,7 +32,7 @@ SECRET_KEY = 'thewitcher'
 DEBUG = True
 
 
-ALLOWED_HOSTS = ['django_thrall.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['thrall-e-commerce-website-caefc95c2f76.herokuapp.com', 'localhost']
 
 
 # Application definition
