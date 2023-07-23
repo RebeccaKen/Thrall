@@ -32,7 +32,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '')
 DEBUG = 'DEVELOPMENT' in os.environ
 
 
-ALLOWED_HOSTS = ['thrall-e-commerce-website-caefc95c2f76.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['thrall-e-commerce-website-caefc95c2f76.herokuapp.com', '8000-rebeccaken-thrall-am0yy8a7pem.ws-eu102.gitpod.io']
 
 
 # Application definition
