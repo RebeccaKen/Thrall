@@ -124,7 +124,7 @@
                                 <p class="card-text">Rating: {{ review.score }}</p>
                                 <p class="card-text">Posted by: {{ review.user.username }}</p>
                                 {% if user.is_authenticated and user == review.user %}
-                                    <div class="row">
+                                    <div class="row mb-5 mb-md-5 mb-lg-4">
                                         <div class="col-md-2">
                                             <form method="post" action="{% url 'edit_review' review_id=review.id %}">
                                                 {% csrf_token %}
@@ -162,7 +162,7 @@
     <div class="row justify-content-center">
         <div class="col-12 col-md-8 col-lg-12">
             <div class="card">
-                <div class="card-body">
+                <div class="card-body mb-4 mb-md-5 mb-lg-5">
                     {% if user.is_authenticated %}
                         {% if user_review %}
                             <h2 class="card-title text-center">Edit Your Review</h2>
