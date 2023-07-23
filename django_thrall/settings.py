@@ -32,7 +32,7 @@ SECRET_KEY = 'thewitcher'
 DEBUG = True
 
 
-ALLOWED_HOSTS = ['thrall-e-commerce-website.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['django_thrall.herokuapp.com', 'localhost']
 
 
 # Application definition
@@ -59,7 +59,7 @@ INSTALLED_APPS = [
     'checkout',
     'profiles',
 
-    #Other
+    # Other
     'crispy_forms'
 ]
 
@@ -134,6 +134,7 @@ ACCOUNT_SIGNUP_EMAIL_ENTER_TWICE = True
 ACCOUNT_USERNAME_MIN_LENGTH = 4
 LOGIN_URL = '/accounts/login/'
 LOGIN_REDIRECT_URL = '/'
+
 
 WSGI_APPLICATION = 'django_thrall.wsgi.application'
 
