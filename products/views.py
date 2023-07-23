@@ -10,7 +10,6 @@ from .forms import ProductForm, ReviewForm, ReviewEditForm
 
 
 def all_products(request):
-    """ A view to show all products, including sorting and search queries """
 
     products = Product.objects.all()
     query = None
@@ -60,7 +59,6 @@ def all_products(request):
 
 
 def product_detail(request, product_id):
-    """ A view to show individual product details and handle review submission and update """
 
     product = get_object_or_404(Product, pk=product_id)
     reviews = product.reviews.all()
@@ -93,9 +91,6 @@ def product_detail(request, product_id):
 
 @login_required
 def edit_review(request, review_id):
-    """
-    A view to allow the users to edit their own review
-    """
 
     review = get_object_or_404(Review, pk=review_id)
     product = review.product
@@ -113,10 +108,10 @@ def edit_review(request, review_id):
         form = ReviewForm(instance=review)
 
     messages.info(request, 'You are editing your review')
-    template = 'products/edit_review.html'  # Update the template name to 'edit_review.html'
+    template = 'products/edit_review.html'
     context = {
         'form': form,
-        'review': review,  # Pass the review to the template context using the correct variable name
+        'review': review,
         'product': product,
         'edit': True,
     }
@@ -128,7 +123,6 @@ def delete_review(request, review_id):
     review = get_object_or_404(Review, id=review_id)
 
     if request.user != review.user:
-        # If the current user doesn't own the review, return an error or redirect
         return redirect('product_detail', product_id=review.product.id)
 
     if request.method == 'POST':
