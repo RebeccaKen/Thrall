@@ -37,7 +37,6 @@ INSTALLED_APPS = [
     'crispy_bootstrap5',
     'blog',
     'bag',
-    'wishlist',
     'checkout',
     'profiles',
 
