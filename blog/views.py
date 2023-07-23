@@ -21,7 +21,6 @@ class PostDetail(View):
         if post.likes.filter(id=self.request.user.id).exists():
             liked = True 
 
-        # Add tags and reading time
         tags = post.tags.all()
         reading_time = post.reading_time
 

@@ -6,13 +6,14 @@ import math
 
 STATUS = ((0, "Draft"), (1, "Published"))
 
+
 class Tag(models.Model):
     name = models.CharField(max_length=50)
     created_on = models.DateTimeField(auto_now_add=True)
 
-
     def __str__(self):
         return self.name
+
 
 class Post(models.Model):
     title = models.CharField(max_length=200, unique=True)
@@ -41,7 +42,6 @@ class Post(models.Model):
         return self.likes.count()
 
     def save(self, *args, **kwargs):
-        # Calculate reading time based on an average reading speed of 200 words per minute
         word_count = len(self.content.split())
         self.reading_time = math.ceil(word_count / 200)
         super().save(*args, **kwargs)

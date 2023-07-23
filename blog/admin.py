@@ -2,6 +2,7 @@ from django.contrib import admin
 from .models import Post, Comment, Tag
 from django_summernote.admin import SummernoteModelAdmin
 
+
 @admin.register(Tag)
 class TagAdmin(admin.ModelAdmin):
 
