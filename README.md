@@ -335,6 +335,34 @@ Similarweb is an online resource that uses public data sources are an aggregatio
 ## Features
 ## Page Content
 ## Deployment
+
+## Scalibility 
+
+During the project's design phase, I initially had a set of features in mind, but due to the deadline constraints, I had to prioritize certain functionalities for the initial deployment. Nevertheless, I have outlined below the features that I would like to include in future resales:
+
+### Inventory Tracking:
+To transform the website into a fully functional platform, incorporating inventory tracking functionality is essential. This feature will not only assist the site owner in keeping track of product levels but also enable the system to notify customers when items are running low in stock or are completely out of stock. This way, both the business owner and the customers can manage their inventory and expectations efficiently.
+
+### Recommendations Feature:
+I wanted to include a wishlist in the sites features. A wishlist provides users with a way to save products they are interested in without immediately making a purchase. This keeps them engaged with the website, even if they are not ready to buy at that moment. It allows users to curate their preferences and revisit their selections later, increasing the chances of product purchase and returning to the site.
+
 ## Technologies Used 
 - similarweb
-- 
+- Bootstrap
+- Django
+- Python
+- Font Awesome
+- Google Dev Tools
+- Github
+- Gitpod
+- Grammerly
+- png2jpg
+- Heroku
+- PostgreSQL
+- Nu Html Checker
+- W3C CSS Validation Service
+- JSHint
+- CI PYTHON LINTER
+- SYNK
+- WAVE
+- Am I Responsive?
