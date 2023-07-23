@@ -11,6 +11,34 @@ from profiles.models import UserProfile
 
 
 class Order(models.Model):
+    """
+    Model representing an order made by a user.
+
+    Attributes:
+        order_number (str): A unique identifier for the order (auto-generated).
+        user_profile (UserProfile): The user profile associated with the order.
+        full_name (str): The full name of the user placing the order.
+        email (str): The email address of the user.
+        phone_number (str): The phone number of the user.
+        country (CountryField): The country where the order is being shipped.
+        postcode (str): The postcode of the delivery address (optional).
+        town_or_city (str): The town or city of the delivery address.
+        street_address1 (str): The first line of the delivery address.
+        street_address2 (str): The second line of the delivery address (optional).
+        county (str): The county of the delivery address (optional).
+        date (datetime): The date and time when the order was created (auto-generated).
+        delivery_cost (Decimal): The cost of delivery for the order.
+        order_total (Decimal): The total cost of the order (excluding delivery).
+        grand_total (Decimal): The grand total cost of the order (including delivery).
+        original_bag (str): A serialized representation of the user's shopping bag.
+        stripe_pid (str): The ID of the payment intent on Stripe.
+
+    Methods:
+        _generate_order_number(): Generates a unique order number using UUID4.
+        update_total(): Updates the order total, delivery cost, and grand total based on line items.
+        save(*args, **kwargs): Overrides the default save method to set the order number if not provided.
+        __str__(): Returns a string representation of the order.
+    """
     order_number = models.CharField(max_length=32, null=False, editable=False)
     user_profile = models.ForeignKey(UserProfile, on_delete=models.SET_NULL,
                                     null=True, blank=True,
@@ -57,6 +85,34 @@ class Order(models.Model):
 
 
 class OrderLineItem(models.Model):
+    """
+    Model representing an order made by a user.
+
+    Attributes:
+        order_number (str): A unique identifier for the order (auto-generated).
+        user_profile (UserProfile): The user profile associated with the order.
+        full_name (str): The full name of the user placing the order.
+        email (str): The email address of the user.
+        phone_number (str): The phone number of the user.
+        country (CountryField): The country where the order is being shipped.
+        postcode (str): The postcode of the delivery address (optional).
+        town_or_city (str): The town or city of the delivery address.
+        street_address1 (str): The first line of the delivery address.
+        street_address2 (str): The second line of the delivery address (optional).
+        county (str): The county of the delivery address (optional).
+        date (datetime): The date and time when the order was created (auto-generated).
+        delivery_cost (Decimal): The cost of delivery for the order.
+        order_total (Decimal): The total cost of the order (excluding delivery).
+        grand_total (Decimal): The grand total cost of the order (including delivery).
+        original_bag (str): A serialized representation of the user's shopping bag.
+        stripe_pid (str): The ID of the payment intent on Stripe.
+
+    Methods:
+        _generate_order_number(): Generates a unique order number using UUID4.
+        update_total(): Updates the order total, delivery cost, and grand total based on line items.
+        save(*args, **kwargs): Overrides the default save method to set the order number if not provided.
+        __str__(): Returns a string representation of the order.
+    """
     order = models.ForeignKey(Order, null=False, blank=False, on_delete=models.CASCADE, related_name='lineitems')
     product = models.ForeignKey(Product, null=False, blank=False, on_delete=models.CASCADE)
     product_size = models.CharField(max_length=2, null=True, blank=True)
