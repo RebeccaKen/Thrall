@@ -144,6 +144,8 @@ In the following section, I will document the process for researching keywords f
 -	Clothes: 
 People also ask: What clothes last the longest? What's the hottest clothing brand? How do you shop for clothes on a budget? What clothing brand starts with P?
 Related searches: clothes men, women clothes online, clothes meaning, clothes website, women’s clothes, clothes for girls, new clothes, boohoo
+
+
 -	Women’s clothes:
 Related search terms: women's clothes online, women's clothes shops in killarney, women’s clothes sale, women’s clothes online, women’s clothes sizes, women’s clothes next day delivery, women’s clothes Ireland 
 Related searches: ASOS, Urban Outfitters, Uniqlo, Nordstorm, women’s clothing websites, where to shop for women’s clothing, trendy women’s clothing, new in women’s clothing, dunnes stores ladies dresses, boohoo, dunnes stores online same
@@ -193,9 +195,6 @@ I have highlighted in red the keywords struck out from my core keyword list for 
 -	Cheap clothing brands: cheapest clothing brand, online clothing sale, How to get cute clothes on a budget? cheap like Shein, fast-fashion 
 
 
--	By the end of this exercise you should have between 10 and 20 keywords, which should be a mix of short-tail keywords and long-tail phrases.
-
-
 **Viable keywords**
 Short: 
 Clothes, Women’s clothes, Fashion, t-shirt, dress, summer clothes, summer dresses, fashion style, fashion website, fashion online, casual wear, streetwear, cheap clothes, shoes, jackets, skirts, leggings, 
@@ -203,8 +202,36 @@ Clothes, Women’s clothes, Fashion, t-shirt, dress, summer clothes, summer dres
 Long: 
 Low-price clothes, Women’s fashion online, cheap clothing brands, plus-size clothing, cheapest clothing brands, online clothing sale, How to get cute clothes on a budget, best online clothing store, free-delivery online clothing low-price clothes
 
-Keywords checked against WordTracker: 
+### Keywords checked against WordTracker: 
+
 Clothes:
+
+![Wordtracker search of 'clothes'](<media/SEO/Clothes .png>)
+
+Cheap Clothes: 
+
+![Wordtracker search of 'cheap clothes'](<media/SEO/Cheap clothes.png>)
+
+Fashion: 
+
+![Wordtracker seach of 'fashion'](media/SEO/Fashion.png)
+
+Low-price clothes:
+
+![Wordtracker seach of 'clothes'](<media/SEO/Low-price clothes .png>)
+
+Plus-size clothes: 
+
+![Wordtracker seach of 'plus-size clothing'](<media/SEO/Plus-size clothing.png>)
+
+Women's clothes:
+
+![Wordtracker seach of 'women's clothes'](<media/SEO/Women's clothes.png>)
+
+Women's fashion online: 
+
+![Wordtracker seach of 'women's fashion online'](<media/SEO/Women's fashion online.png>)
+
 
 ## Content ## 
 
@@ -330,6 +357,42 @@ In the following document will display the research and evidence I have collecte
 
 Similarweb is an online resource that uses public data sources are an aggregation of online information available to the public. Like how search engines like Google index the web, Similarweb employs an automated technique for capturing and indexing public data from billions of website pages and apps every month.
 
+1.	Who are your users?
+
+Judging by the demographics presented below, the demographic most likely to be customers of an online fashion e-commerce business like Thrall would be women aged between 18-34.
+
+![image of user demographic chart](<media/marketing research/user-demographic-1.png>)
+
+![image of gender demographic chart](<media/marketing research/user-demograhic-2.png>)
+
+2.	Which online platforms would you find lots of your users?
+
+According to the data presented below, Thrall customers are most likely to be found on Facebook. 
+
+![image of social media user chart](<media/marketing research/social-media-platforms.png>)
+
+3.	Would your users use social media? If yes, which platforms do you think you would find them on?
+
+The most likely place a Thrall user would be found is Facebook. 
+
+![image of social media user chart](<media/marketing research/social-media-platforms.png>)
+
+4.	Would your business run sales or offer discounts? How do you think your users would most like to hear about these offers? 
+
+Thrall, as an e-commerce business, would offer discounts to reward existing customers and entice new customers to shop on the website. A study of Shein’s discount implementation quickly reveals that Shein has 3 routes to make customers aware of discounts. 
+
+•	Email marketing: Discounts will be sent to customer’s directly to their email inbox.
+•	Banner ad: A banner presenting discounts will run across the top of the homepage of the website in order to advertise discounts directly to site visitors.
+•	Discounts at checkout: Discounts could be made available at the check-out so a customer can apply their discount directly to their checkout items.  
+
+5.	Would your business have a budget to spend on advertising? Or would it need to work with free or low-cost options to market itself?
+
+Thrall's marketing strategy would leverage a substantial budget to effectively reach its target demographic. A key focus would be on utilizing Google Ads to enhance Thrall's SEO ranking, increasing visibility and attracting organic traffic. To establish trust with the target demographic, a combination of organic marketing tactics would be employed. This would involve creating fashion-oriented content specifically tailored to the audience and distributing it across Thrall's social media platforms.
+
+Furthermore, Thrall would prioritize cultivating a robust social media presence, closely intertwined with a compelling influencer marketing strategy. By partnering with influential personalities who resonate with younger shoppers, Thrall aims to bolster its reputation through engaging content such as clothing hauls and reviews. To encourage product reviews across various social media platforms and YouTube, Thrall would offer an affiliate marketing program option or provide vouchers to influencers with an audience matching the demographic of the brand.
+This user-generated content, generated through influencer partnerships, would subsequently be shared on Thrall's own social media pages, further amplifying its reach and engagement within the target demographic.
+
+Regular newsletters would also be sent to a registered users inbox containing an overview of new products/sales and discount codes. 
 
 
 ## Features
@@ -343,7 +406,7 @@ During the project's design phase, I initially had a set of features in mind, bu
 ### Inventory Tracking:
 To transform the website into a fully functional platform, incorporating inventory tracking functionality is essential. This feature will not only assist the site owner in keeping track of product levels but also enable the system to notify customers when items are running low in stock or are completely out of stock. This way, both the business owner and the customers can manage their inventory and expectations efficiently.
 
-### Recommendations Feature:
+### Wishlist Feature:
 I wanted to include a wishlist in the sites features. A wishlist provides users with a way to save products they are interested in without immediately making a purchase. This keeps them engaged with the website, even if they are not ready to buy at that moment. It allows users to curate their preferences and revisit their selections later, increasing the chances of product purchase and returning to the site.
 
 ## Technologies Used 
