@@ -120,6 +120,14 @@ Shopping bag page:
 ![image of shopping cart wireframe](<media/thrall-wireframes/shopping cart page.png>)
 
 
+## Testing 
+
+I have used a combination of manual and automated testing to ensure the website's functionality meets the desired intent.
+
+
+### Testing
+[Testing](testing.md)
+
 ## Database Schema
 ## SEO Considerations
 ### SEO Keyword Research Process 
@@ -334,9 +342,6 @@ In the following section, I have documented my process for researching & creatin
 - Homepage: The website will have a visually appealing homepage or dashboard that provides an overview of the key features, sections, or categories available in your web application. 
   
 - Search Functionality: The website will have a search bar within the web application to allow users to search for specific content or features.
-
-
-
 
 
 
