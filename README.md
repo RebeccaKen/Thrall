@@ -214,31 +214,31 @@ Low-price clothes, Women’s fashion online, cheap clothing brands, plus-size cl
 
 Clothes:
 
-![Wordtracker search of 'clothes'](<media/SEO/Clothes .png>)
+![Wordtracker search of 'clothes'](<media/seo/clothes .png>)
 
 Cheap Clothes: 
 
-![Wordtracker search of 'cheap clothes'](<media/SEO/Cheap clothes.png>)
+![Wordtracker search of 'cheap clothes'](<media/seo/cheap clothes.png>)
 
 Fashion: 
 
-![Wordtracker seach of 'fashion'](media/SEO/Fashion.png)
+![Wordtracker seach of 'fashion'](media/seo/fashion.png)
 
 Low-price clothes:
 
-![Wordtracker seach of 'clothes'](<media/SEO/Low-price clothes .png>)
+![Wordtracker seach of 'clothes'](<media/seo/low-price clothes .png>)
 
 Plus-size clothes: 
 
-![Wordtracker seach of 'plus-size clothing'](<media/SEO/Plus-size clothing.png>)
+![Wordtracker seach of 'plus-size clothing'](<media/seo/plus-size clothing.png>)
 
 Women's clothes:
 
-![Wordtracker seach of 'women's clothes'](<media/SEO/Women's clothes.png>)
+![Wordtracker seach of 'women's clothes'](<media/seo/women's clothes.png>)
 
 Women's fashion online: 
 
-![Wordtracker seach of 'women's fashion online'](<media/SEO/Women's fashion online.png>)
+![Wordtracker seach of 'women's fashion online'](<media/seo/women's fashion online.png>)
 
 
 ## Content ## 
