@@ -3,7 +3,7 @@ html, body {
 }
 
 body {
-    background: url('./media/women_modelling_landscape.jpg') no-repeat center center fixed;
+    background: url('../../media/women_modelling_landscape.jpg') no-repeat center center fixed;
     background-size: cover;
     color: #555;
     font-family: 'Lato';
