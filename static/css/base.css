@@ -164,6 +164,10 @@ input[name='q']::placeholder {
     flex-shrink: 0;
     }
 
+.product-image {
+    height: 500px; /* Set the desired height here */
+    object-fit: cover; 
+}
 
 .message-container {
     position: fixed;
