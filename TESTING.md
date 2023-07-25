@@ -2,6 +2,11 @@
 
 [Main README.md](README.md)
 
+I used Google Dev Tools lighthouse to test performance and accessibility of the website
+
+<img src="media/testing/lighthouse-score.png"  width="80%" height="80%">
+
+
 ### Epic 1 - Core website functionality
 1. As a site user I can find a navigation bar and footer so that I can see what content there is on the website.
 2. As a site user, I can see important information on the website's home page so that I don’t have to search the website for that information.

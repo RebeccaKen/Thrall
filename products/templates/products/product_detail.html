@@ -17,11 +17,11 @@
         <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
             <div class="image-container my-5">
                 {% if product.image %}
-                    <a href="{{ product.image.url }}" target="_blank" aria-label="{{ product.name }}">
+                    <a href="{{ product.image.url }}" target="_blank">
                         <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
                     </a>
                 {% else %}
-                    <a href="" aria-label="No Image Available">
+                    <a href="">
                         <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
                     </a>
                 {% endif %}
@@ -33,22 +33,22 @@
                 <p class="lead mb-0 text-left font-weight-bold">${{ product.price }}</p>
                 {% if product.category %}
                     <p class="small mt-1 mb-0">
-                        <a class="text-muted" href="{% url 'products' %}?category={{ product.category.name }}" aria-label="Product Category: {{ product.category.friendly_name }}">
+                        <a class="text-muted" href="{% url 'products' %}?category={{ product.category.name }}">
                             <i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}
                         </a>
                     </p>
                 {% endif %}
                 {% if product.rating %}
-                    <small class="text-muted" aria-label="Product Rating: {{ product.rating }} out of 5"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
+                    <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
                 {% else %}
-                    <small class="text-muted" aria-label="No Rating">No Rating</small>
+                    <small class="text-muted">No Rating</small>
                 {% endif %}
                 {% if request.user.is_superuser %}
-                    <small class="ml-3">
-                        <a href="{% url 'edit_product' product.id %}" aria-label="Edit Product">Edit</a> | 
-                        <a class="text-danger" href="{% url 'delete_product' product.id %}" aria-label="Delete Product">Delete</a>
-                    </small>
-                {% endif %}
+                <small class="ml-3">
+                    <a href="{% url 'edit_product' product.id %}">Edit</a> | 
+                    <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
+                </small>
+            {% endif %}
                 <p class="mt-3">{{ product.description }}</p>
                 <form class="form" action="{% url 'add_to_bag' product.id %}" method="POST">
                     {% csrf_token %}
@@ -95,13 +95,13 @@
                             </div>
 
                             <div class="col{% if s %}-12 mt-2{% endif %}">
-                                <a href="{% url 'products' %}" class="btn btn-lg btn-outline-black rounded-0 mt-5" aria-label="Keep Shopping">
+                                <a href="{% url 'products' %}" class="btn btn-lg btn-outline-black rounded-0 mt-5">
                                     <span class="icon">
                                         <i class="fas fa-chevron-left"></i>
                                     </span>
                                     <span class="text-uppercase">Keep Shopping</span>
                                 </a>
-                                <input type="submit" class="btn btn-lg btn-black rounded-0 text-uppercase mt-5" value="Add to Bag" aria-label="Add to Bag">
+                                <input type="submit" class="btn btn-lg btn-black rounded-0 text-uppercase mt-5" value="Add to Bag">
                             </div>
                             <input type="hidden" name="redirect_url" value="{{ request.path }}">
                         {% endwith %}
@@ -144,13 +144,54 @@
                                             </form>
                                         </div>
                                     </div>
-                                {% elif user.is_authenticated %}
+                                    {% elif user.is_authenticated %}
                                     <p class="text-center">You can only edit or delete your own reviews.</p>
                                 {% else %}
                                     <p class="text-center">Please log in to edit or delete your review.</p>
                                 {% endif %}
                             </div>
-                        {% endblock %}
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-8 col-lg-12">
+            <div class="card">
+                <div class="card-body mb-4 mb-md-5 mb-lg-5">
+                    {% if user.is_authenticated %}
+                        {% if user_review %}
+                            <h2 class="card-title text-center">Edit Your Review</h2>
+                        {% else %}
+                            <h2 class="card-title text-center">Leave a Review</h2>
+                        {% endif %}
+                        <form method="post">
+                            {% csrf_token %}
+                            <div class="mb-3 text-center">
+                                <label for="{{ form.score.id_for_label }}">Rating:</label>
+                                {{ form.score|as_crispy_field }}
+                            </div>
+                            <div class="mb-3">
+                                <label for="{{ form.comment.id_for_label }}"></label>
+                                {{ form.comment|as_crispy_field }}
+                            </div>
+                            <div class="d-grid gap-2 text-center">
+                                <button type="submit" class="btn btn-dark">Submit</button>
+                            </div>
+                        </form>
+                    {% else %}
+                        <p class="text-center mb-5">Please log in to leave a review.</p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
 
 {% block postloadjs %}
 {{ block.super }}
