@@ -11,7 +11,7 @@
 
 {% block content %}
 
-<div class="container-fluid mt-5">
+div class="container-fluid mt-5">
   <div class="row">
     <div class="col-12 mt-6 left d-flex flex-wrap justify-content-start">
       {% for post in post_list %}
@@ -20,19 +20,20 @@
           <div class="card-body">
             <div class="image-container">
               {% if "placeholder" in post.featured_image.url %}
-              <img class="card-img-top" src="">
+              <img class="card-img-top" src="" alt="">
               {% else %}
-              <img class="card-img-top" src="{{ post.featured_image.url }}">
+              <img class="card-img-top" src="{{ post.featured_image.url }}" alt="{{ post.title }}">
               {% endif %}
               <div class="image-flash">
                 <p class="author">Author: {{ post.author }}</p>
               </div>
             </div>
-            <a href="{% url 'blog:post_detail' post.slug %}" class="post-link">
+            <a href="{% url 'blog:post_detail' post.slug %}" class="post-link" aria-label="Read More: {{ post.title }}">
               <h2 class="card-title" style="color: rgb(85, 84, 84); text-decoration-color: black;">{{ post.title }}</h2> 
               <p class="card-text" style="color: rgb(151, 151, 155); text-decoration-color: black;">{{ post.excerpt }}</p> 
-            <hr/>
-            <p class="card-text text-muted h6">{{ post.created_on}} <i class="fa-light fa-thumbs-up"></i>{{ post.number_of_likes }}</p>
+              <hr/>
+              <p class="card-text text-muted h6" aria-label="Posted on: {{ post.created_on }}"><i class="fa-light fa-calendar"></i> {{ post.created_on }} <i class="fa-light fa-thumbs-up"></i> {{ post.number_of_likes }}</p>
+            </a>
           </div>
         </div>
       </div>
@@ -44,17 +45,17 @@
     </div>
   </div>
 </div>
-  {% if is_paginated %}
+{% if is_paginated %}
   <nav aria-label="Page navigation">
     <ul class="pagination justify-content-center">
       {% if page_obj.has_previous %}
-      <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREV </a></li>
+      <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link" aria-label="Previous Page">&laquo; PREV </a></li>
       {% endif %}
       {% if page_obj.has_next %}
-      <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
+      <li><a href="?page={{ page_obj.next_page_number }}" class="page-link" aria-label="Next Page"> NEXT &raquo;</a></li>
       {% endif %}
     </ul>
   </nav>
-  {% endif %}
+{% endif %}
 </div>
 {% endblock %}
