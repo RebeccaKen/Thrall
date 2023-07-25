@@ -33,16 +33,16 @@
         </li>
 
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="specials-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="sales-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Sale Dropdown">
                 Sale
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="specials-link">
+            <div class="dropdown-menu border-0" aria-labelledby="sales-link">
                 <a href="{% url 'products' %}?category=reduced" class="dropdown-item">Reduced</a>
                 <a href="{% url 'products' %}?category=clearance" class="dropdown-item">Clearance</a>
             </div>
         </li>
         <li class="nav-item">
-            <a class="logo-font font-weight-bold nav-link text-black" href="{% url 'blog:post_list' %}" id="specials-link">
+            <a class="logo-font font-weight-bold nav-link text-black" href="{% url 'blog:post_list' %}" id="blog-link" aria-label="Blog">
                 Blog
             </a>
         </li>
