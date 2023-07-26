@@ -20,3 +20,7 @@ def contact_view(request):
 
 def faq_page(request):
     return render(request, 'contact/faq.html')
+
+
+def newsletter(request):
+    return render(request, 'contact/newsletter.html')

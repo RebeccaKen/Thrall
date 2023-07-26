@@ -416,6 +416,9 @@ Regular newsletters would also be sent to a registered users inbox containing an
 
 ## Page Content
 
+## Database Diagram 
+
+<img src="media/testing/models.png"  width="100%" height="100%">
 
 ## Deployment
 
@@ -441,10 +444,6 @@ I have used Gmail SMTP to send confirmation emails and all AllAuth related email
 ### Stripe
 
 In order to take payments for the online store, I implemented Stripe:
-
-### Stripe
-
-In order to take payments for the online store, I implemented Stripe.
 
 ### AWS static and media storage
 

@@ -17,6 +17,7 @@
     {% block corecss %}
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap">
+        <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="{% static 'css/base.css' %}">
     {% endblock %}
 
@@ -31,9 +32,9 @@
         <script src="https://js.stripe.com/v3/"></script>
     {% endblock %}
 
-    {% block extra_js %}
+    {% block extra_js %} 
     {% endblock %}
- 
+    
     <title>Thrall {% block extra_title %}{% endblock %}</title>
 </head>
     <body>
@@ -76,6 +77,7 @@
                             <div class="dropdown-menu" aria-labelledby="contactDropdown">
                                 <a class="dropdown-item" href="{% url 'contact:contact' %}">Contact Us</a>
                                 <a class="dropdown-item" href="{% url 'contact:faq_page' %}">FAQ's</a>
+                                <a class="dropdown-item" href="{% url 'contact:newsletter' %}">Newsletter</a>
                             </div>
                         </li>
                         <li class="list-inline-item dropdown">
@@ -154,7 +156,6 @@
     {% block footer %}
     <footer class="footer container-fluid mt-2 bg-black">
         <div class="container">
-            <div class="row">
                 <div class="col text-center text-white">
                     <p class="m-0">This site is for learning purposes</p>
                     <div class="social-media-icons">
@@ -173,7 +174,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+    </div>
     </footer>
     {% endblock %}
 
