@@ -131,7 +131,7 @@ I have used a combination of manual and automated testing to ensure the website'
 [Testing](TESTING.md)
 
 ## Database Schema
-## SEO Considerations
+
 ### SEO Keyword Research Process 
 In the following section, I will document the process for researching keywords for the website 'Thrall'. I will find and analyse search engine terms that people enter into search engines with the goal of using that data to optimize my website for search engine optimization. 
 
@@ -401,8 +401,19 @@ This user-generated content, generated through influencer partnerships, would su
 
 Regular newsletters would also be sent to a registered users inbox containing an overview of new products/sales and discount codes. 
 
+### Facebook page
 
-## Features
+<img src="media/facebook/facebook-header.png"  width="100%" height="100%">
+
+<img src="media/facebook/facebook-bio.png"  width="100%" height="100%">
+
+<img src="media/facebook/facebook-images.png"  width="100%" height="100%">
+
+<img src="media/facebook/facebook-post.png"  width="100%" height="100%">
+
+<img src="media/facebook/facebook-post-2.png"  width="100%" height="100%">
+
+
 ## Page Content
 
 

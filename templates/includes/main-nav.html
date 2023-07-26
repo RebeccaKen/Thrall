@@ -1,3 +1,6 @@
+<!DOCTYPE html>
+<html lang="en">
+
 <div class="collapse navbar-collapse" id="main-nav">
     <ul class="navbar-nav w-auto mx-auto">
         <li class="nav-item dropdown">
@@ -18,7 +21,7 @@
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="clothing-link">
                 <a href="{% url 'products' %}?category=dresses" class="dropdown-item">Curve Dresses</a>
-                <a href="{% url 'products' %}?category=jeans"class="dropdown-item">Jeans</a>
+                <a href="{% url 'products' %}?category=jeans" class="dropdown-item">Jeans</a>
                 <a href="{% url 'products' %}?category=tops" class="dropdown-item">Tops</a>
             </div>
         </li>
@@ -43,9 +46,10 @@
             </div>
         </li>
         <li class="nav-item">
-            <a class="logo-font font-weight-bold nav-link text-black" href="{% url 'blog:post_list' %}" id="specials-link">
+            <a class="logo-font font-weight-bold nav-link text-black" href="{% url 'blog:post_list' %}" id="blog-link">
                 Blog
             </a>
         </li>
     </ul>
 </div>
+</html>
