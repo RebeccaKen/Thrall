@@ -413,7 +413,9 @@ Regular newsletters would also be sent to a registered users inbox containing an
 <img src="media/facebook/facebook-post-2.png"  width="100%" height="100%">
 
 
-## Page Content
+## Newsletter
+
+<img src="media/testing/newsletter.png"  width="100%" height="100%">
 
 ## Database Diagram 
 
