@@ -126,7 +126,7 @@ I have used a combination of manual and automated testing to ensure the website'
 
 
 ### Testing
-[Testing](testing.md)
+[Testing](TESTING.md)
 
 ## Database Schema
 ## SEO Considerations
