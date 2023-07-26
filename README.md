@@ -402,7 +402,67 @@ Regular newsletters would also be sent to a registered users inbox containing an
 
 ## Features
 ## Page Content
+
+
 ## Deployment
+
+The main branch of this repository has been used for the deployed version of this application.
+Using Github & Gitpod
+
+To deploy my Django application, I had to use the Code Institute Python Essentials Template:
+
+1. Click the Use This Template button.
+2. Add a repository name and brief description.
+3. Click the Create Repository from Template to create your repository.
+4. To create a Gitpod workspace you then need to click Gitpod, this and wait for the workspace to build.
+5. When you want to work on the project it is best to open the workspace from Gitpod (rather than Github) as this will open your previous workspace rather than - - - create a new one. You should pin the workspace so that it isn't deleted.
+6. Committing your work should be done often and should have clear/explanatory messages, use the following commands to make your commits:
+- git add .: adds all modified files to a staging area
+- git commit -m "A message explaining your commit": commits all changes to a local repository.
+- git push: pushes all your committed changes to your Github repository.
+
+### Gmail SMTP
+
+I have used Gmail SMTP to send confirmation emails and all AllAuth related emails when the deployed version is used. I used the following documentation to set it up and add these settings to my settings.py file.
+
+### Stripe
+
+In order to take payments for the online store, I implemented Stripe:
+
+### Stripe
+
+In order to take payments for the online store, I implemented Stripe.
+
+### AWS static and media storage
+
+All static and media files are stored in the cloud using Amazon AWS S3. 
+
+### Creating an Application with Heroku
+
+I followed the below steps using the Code Institute tutorial and Django Blog cheatsheat:
+
+The following command in the Gitpod CLI will create the relevant files needed for Heroku to install your project dependencies pip3 freeze --local > requirements.txt. Please note this file should be added to a .gitignore file to prevent the file from being committed. A Procfile is also required that specifies the commands that are executed by the app on startup.
+
+Go to Heroku.com and log in; if you do not already have an account then you will need to create one.
+Click the New dropdown and select Create New App.
+Enter a name for your new project, all Heroku apps need to have a unique name, you will be prompted if you need to change it.
+Select the region you are working in.
+
+Heroku Settings You will need to set your Environment Variables - this is a key step to ensuring your application is deployed properly.
+
+In the resources tab you must install 'Heroku Postgres'
+
+Heroku Deployment using website In the Deploy tab:
+
+- Connect your Heroku account to your Github Repository following these steps:
+- 
+1. Click on the Deploy tab and choose Github-Connect to Github.
+2. Enter the GitHub repository name and click on Search.
+3. Choose the correct repository for your application and click on Connect
+
+You can then choose to deploy the project manually or automatically, automatic deployment will generate a new application every time you push a change to Github, whereas manual deployment requires you to push the Deploy Branch button whenever you want a change made.
+
+Once you have chosen your deployment method and have clicked Deploy Branch your application will be built and you should see the below View button, click this to open your application.
 
 ## Scalibility 
 
