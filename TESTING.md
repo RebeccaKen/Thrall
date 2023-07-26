@@ -4,9 +4,19 @@
 
 I used Google Dev Tools lighthouse to test performance and accessibility of the website
 
-<img src="media/testing/lighthouse-score.png"  width="80%" height="80%">
+<img src="media/testing/lighthouse-report.png"  width="80%" height="80%">
 
+## Unresolved Bugs 
 
+There is a bug when the user edits their product review. When the user clicks 'edit' an alert box appears at the right hand of the screen stating 'Review Edit failed,' although the edit is successful when submitted.
+
+<img src="media/testing/bug-review.png"  width="80%" height="80%">
+
+### 404 error page
+
+I have created a custom 404.html for the website. 
+
+<img src="media/testing/error-page.png"  width="80%" height="80%">
 
 
 ### Epic 1 - Core website functionality
