@@ -45,7 +45,7 @@ Link to delpoyed site: [Thrall](https://thrall-e-commerce-website-caefc95c2f76.h
 ### Epic 8: Read Articles 
 19. As a site user I can read engaging articles about Thrall's product items so that be up-to-date on the latest styles.
 
-## Skeletons 
+<img src="media/testing/kanban.png"  width="50%" height="50%">
 
 ### Mobile wireframes
 
@@ -130,7 +130,6 @@ I have used a combination of manual and automated testing to ensure the website'
 ### Testing
 [Testing](TESTING.md)
 
-## Database Schema
 
 ### SEO Keyword Research Process 
 In the following section, I will document the process for researching keywords for the website 'Thrall'. I will find and analyse search engine terms that people enter into search engines with the goal of using that data to optimize my website for search engine optimization. 
@@ -417,6 +416,8 @@ Regular newsletters would also be sent to a registered users inbox containing an
 ## Page Content
 
 ## Database Diagram 
+
+An Entity Relationship Diagram was created using  to visualise the relationships between the data structures. The intention was to utilise Django-AllAuth for the user authentication system and create three custom models - one for contact, reviews and blog.
 
 <img src="media/testing/models.png"  width="100%" height="100%">
 

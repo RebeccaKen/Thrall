@@ -6,9 +6,14 @@ I used Google Dev Tools lighthouse to test performance and accessibility of the 
 
 <img src="media/testing/lighthouse-report.png"  width="80%" height="80%">
 
-I used W3C CSS to test performance and accessibility of the website
+I used W3C CSS to test the CSS of the website
 
 <img src="media/testing/css-validation.png"  width="80%" height="80%">
+
+
+I used CI Code Linter to test python code of the website
+
+<img src="media/testing/ci-linter.png"  width="80%" height="80%">
 
 
 ## Unresolved Bugs 
@@ -19,6 +24,8 @@ There is a bug when the user edits their product review. When the user clicks 'e
 
 
 There is a big on my post_detail.html page. When the user clicks on the page, the footer gets cut off at the left side. 
+
+<img src="media/testing/footer-bug.png"  width="80%" height="80%">
 
 ### 404 error page
 

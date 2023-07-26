@@ -4,7 +4,6 @@ from datetime import date, time
 # Create your models here.
 
 
-
 class Contact(models.Model):
     """
     The contact model represents the feedback provided by users of the system.
