@@ -17,6 +17,9 @@ There is a bug when the user edits their product review. When the user clicks 'e
 
 <img src="media/testing/bug-review.png"  width="80%" height="80%">
 
+
+There is a big on my post_detail.html page. When the user clicks on the page, the footer gets cut off at the left side. 
+
 ### 404 error page
 
 I have created a custom 404.html for the website. 
