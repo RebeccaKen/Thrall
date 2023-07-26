@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /accounts/
+Disallow: /bag/
+Disallow: /profiles/
+Sitemap: https://thrall-e-commerce-website-caefc95c2f76.herokuapp.com/sitemaps.xml
