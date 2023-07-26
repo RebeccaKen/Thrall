@@ -2,6 +2,8 @@
 
 Thrall is a fictitious B2C e-commerce application catering to women's clothing, offering affordable options directly to the consumer. The store was designed and implemented with Django, Python, HTML, and CSS. 
 
+<img src="media/testing/am-i-responsive.png"  width="100%" height="100%">
+
 Link to delpoyed site: [Thrall](https://thrall-e-commerce-website-caefc95c2f76.herokuapp.com/)
 
 ## The Strategy Plane
