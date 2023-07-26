@@ -2,8 +2,8 @@
 <html lang="en">
 
 {% load static %}
-<head>
 
+<head>
     {% block meta %}
         <meta name="description" content="Thrall Offers Clothes to Fit Your Style Needs. Shop Women's Fashion Online Now.">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -87,7 +87,7 @@
                                     <p class="my-0">My Account</p>
                                 </div>
                             </a>
-                            <div class="dropdown-menu border-0" aria-labelledby="user-options">
+                            <div class="dropdown-menu border-0" aria-labelledby="user-list">
                                 {% if request.user.is_authenticated %}
                                 {% if request.user.is_superuser %}
                                     <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
@@ -160,10 +160,10 @@
                     <p class="m-0">This site is for learning purposes</p>
                     <div class="social-media-icons">
                         <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Visit our Facebook page (opens in a new tab)">
-                            <i class="fa-brands fa-facebook-f ms-3 fa-lg" style="color: #ffffff;"></i>
+                            <i class="fab fa-facebook-f ms-3 fa-lg" style="color: #ffffff;"></i>
                         </a>
                         <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Visit our Twitter page (opens in a new tab)">
-                            <i class="fa-brands fa-twitter ms-3 fa-lg" style="color: #ffffff;"></i>
+                            <i class="fab fa-twitter ms-3 fa-lg" style="color: #ffffff;"></i>
                         </a>
                         <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Visit our Instagram page (opens in a new tab)">
                             <i class="fab fa-instagram ms-3 fa-lg" style="color: #ffffff;"></i>
@@ -174,7 +174,6 @@
                     </div>
                 </div>
             </div>
-    </div>
     </footer>
     {% endblock %}
 
