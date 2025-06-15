@@ -25,3 +25,4 @@ s3transfer==0.6.1
 sqlparse==0.4.4
 stripe==5.5.0
 urllib3==1.26.16
+requests>=2.32.4 # not directly required, pinned by Snyk to avoid a vulnerability
