@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: thrall
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "gunicorn thrall.wsgi:application"
+    pythonVersion: 3.11.9
+    plan: free  # or 'starter', depending on your Render tier
+    branch: main
+    autoDeploy: true
