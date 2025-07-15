@@ -6,7 +6,7 @@ Thrall is a fictitious B2C e-commerce application catering to women's clothing, 
 
 <ins>Note on deployment:</ins>The live deployment of this project is currently experiencing issues due to configuration conflicts during hosting on Render/Railway.
 
-I am actively working on resolving this and will update the link as soon as the site is live. In the meantime, the full project can be run locally using the instructions below.
+I am actively working on resolving this and will update the link as soon as the site is live. 
 
 ## The Strategy Plane
 
